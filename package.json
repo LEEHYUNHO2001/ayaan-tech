@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
+    "dayjs": "^1.11.13",
     "next": "15.2.1",
     "next-mdx-remote": "^5.0.0",
     "ramda": "^0.30.1",
