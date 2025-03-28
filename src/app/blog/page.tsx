@@ -1,7 +1,7 @@
-import { getBlogPostNameList } from "@/helpers/markdown-helper";
+import { BlogPostMeta, getBlogPostList } from "@/helpers/markdown-helper";
 
 export default function BlogHomePage() {
-  const blogPostNameList = getBlogPostNameList(); // 서버에서 실행됨
+  const blogPostList = getBlogPostList();
   const blogHomeTextModel = {
     title: "블로그 목록",
   };
@@ -10,9 +10,9 @@ export default function BlogHomePage() {
     <section>
       <h1>{blogHomeTextModel.title}</h1>
       <ul>
-        {blogPostNameList.map((postName: string) => (
-          <li key={postName}>
-            <a href={`/blog/${postName}`}>{postName}</a>
+        {blogPostList.map(({ name }: BlogPostMeta) => (
+          <li key={name}>
+            <a href={`/blog/${name}`}>{name}</a>
           </li>
         ))}
       </ul>
