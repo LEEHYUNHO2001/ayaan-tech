@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
+import { replace, map, pipe } from "ramda";
 
 // Velog 백업 파일이 있는 디렉터리
 const getBlogDirectory = (): string =>
@@ -10,13 +11,10 @@ const getBlogDirectory = (): string =>
 const getBlogPostPullNameList = (): string[] =>
   fs.readdirSync(getBlogDirectory());
 
-const removeMarkdownExtension = (fileName: string): string =>
-  fileName.replace(/\.md$/, "");
+const removeMarkdownExtension = replace(/\.md$/, "");
 
-export const getBlogPostNameList = (): string[] => {
-  const fileNameList = getBlogPostPullNameList();
-  return fileNameList.map(removeMarkdownExtension);
-};
+export const getBlogPostNameList = (): string[] =>
+  pipe(getBlogPostPullNameList, map(removeMarkdownExtension))();
 
 // 마크다운 파일을 읽어서 HTML로 변환
 export const getMarkdownContent = async (fileName: string): Promise<string> => {
