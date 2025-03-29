@@ -1,4 +1,4 @@
-import { BlogPostMeta, getBlogPostList } from "@/helpers/markdown-helper";
+import { BlogPostMeta, getBlogPostList } from "@/helpers/markdown-list-helper";
 
 export default function BlogHomePage() {
   const blogPostList = getBlogPostList();
