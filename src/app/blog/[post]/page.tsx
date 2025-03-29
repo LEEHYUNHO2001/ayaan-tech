@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JSX } from "react";
 import { notFound } from "next/navigation";
-import { getMarkdownContentWithoutMatter } from "@/helpers/markdown-detail-helper";
+import { getBackupMarkdownContentWithoutMatter } from "@/helpers/backup-markdown-detail-helper";
 
 type BlogPostPageProps = {
   params: Promise<{ post: string }>;
@@ -29,7 +29,7 @@ export default async function BlogPostPage({
 }: BlogPostPageProps): Promise<JSX.Element> {
   const { post } = await params;
   const decodedPost = decodeURIComponent(post);
-  const { content } = await getMarkdownContentWithoutMatter(decodedPost);
+  const { content } = await getBackupMarkdownContentWithoutMatter(decodedPost);
 
   if (!content) {
     notFound();

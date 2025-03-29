@@ -6,7 +6,7 @@ import {
   extractFrontMatter,
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
-} from "@/helpers/markdown-matter-helper";
+} from "@/helpers/backup-markdown-matter-helper";
 import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
 
 export interface BlogPostMeta extends MarkdownFrontMatterModel {
@@ -41,5 +41,5 @@ const getBlogPostMetaData = (fileFullName: string): BlogPostMeta => {
 const sortPostsByDate = (postList: BlogPostMeta[]): BlogPostMeta[] =>
   postList.sort((a, b) => b.dayjs.valueOf() - a.dayjs.valueOf());
 
-export const getBlogPostList = (): BlogPostMeta[] =>
+export const getBlogBackupPostList = (): BlogPostMeta[] =>
   pipe(getBlogPostFullNameList, map(getBlogPostMetaData), sortPostsByDate)();

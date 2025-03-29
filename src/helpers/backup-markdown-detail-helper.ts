@@ -8,7 +8,7 @@ import {
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
   REGEX_FIRST_THREE_DASH_BLOCK,
-} from "@/helpers/markdown-matter-helper";
+} from "@/helpers/backup-markdown-matter-helper";
 import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
 
 export interface MarkdownContentModel extends MarkdownFrontMatterModel {
@@ -21,7 +21,7 @@ const removeMatter: (fileContent: string) => string = replace(
 );
 
 // 마크다운 파일을 읽어서 HTML로 변환
-export const getMarkdownContentWithoutMatter = async (
+export const getBackupMarkdownContentWithoutMatter = async (
   fileName: string
 ): Promise<MarkdownContentModel> => {
   const filePath = path.join(getBlogBackupDirectory(), `${fileName}.md`);
