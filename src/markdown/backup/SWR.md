@@ -50,17 +50,17 @@ Stale-While-Revalidate
 <br />
 
 ```jsx
-import useSWR from 'swr'
+import useSWR from 'src/markdown/backup/SWR'
 
-function Point(){
-  const {data, error} = useSWR('/api/points', url => {
+function Point() {
+  const { data, error } = useSWR('/api/points', url => {
     return fetch(url).then(res => res.json())
   })
-  
-  if(error){
+
+  if (error) {
     return <div>failed to load</div>
   }
-  if(!data){
+  if (!data) {
     return <div>Loading..</div>
   }
   return <div>{data}</div>
@@ -78,34 +78,34 @@ function Point(){
 <br />
 
 ```jsx
-import useSWR from 'swr'
+import useSWR from 'src/markdown/backup/SWR'
 
 const Profile = () => {
-    const fetcher = (url) => axios.get(url).then((result) => result.data);
-    const {data:followersData, error:followerError} = useSWR(
-        `/user/followers`, fetcher);
-    const {data:followingsData, error:followingError} = useSWR(
-        `/user/followings`, fetcher);
+  const fetcher = (url) => axios.get(url).then((result) => result.data);
+  const { data: followersData, error: followerError } = useSWR(
+    `/user/followers`, fetcher);
+  const { data: followingsData, error: followingError } = useSWR(
+    `/user/followings`, fetcher);
 
-    if(followerError || followingError){
-        console.error(followerError || followingError);
-        return '팔로잉/팔로워 로딩 중 에러가 발생했습니다.';
-    }
+  if (followerError || followingError) {
+    console.error(followerError || followingError);
+    return '팔로잉/팔로워 로딩 중 에러가 발생했습니다.';
+  }
 
-    return(
-        <>
-            <Head>
-                <title>내 프로필</title>
-            </Head>
-            <AppLayout>
-                <NicknameEditForm />
-                <FollowList header="팔로잉" data={followingsData} 
-                loading={!followingsData && !followingError}/>
-                <FollowList header="팔로워" data={followersData} 
-                loading={!followersData && !followerError}/>
-            </AppLayout>
-        </>
-    );
+  return (
+    <>
+      <Head>
+        <title>내 프로필</title>
+      </Head>
+      <AppLayout>
+        <NicknameEditForm />
+        <FollowList header="팔로잉" data={followingsData}
+                    loading={!followingsData && !followingError} />
+        <FollowList header="팔로워" data={followersData}
+                    loading={!followersData && !followerError} />
+      </AppLayout>
+    </>
+  );
 };
 }
 ```
@@ -126,28 +126,30 @@ const Profile = () => {
 <br />
 
 ```jsx
-import useSWR from 'swr'
+import useSWR from 'src/markdown/backup/SWR'
 
-function useCounter(){
-  const {data, mutate} = useSWR('state', () => window.count)
-  return {data, mutate: (count) => {
-    window.count = count
-    return mutate()
-  }}
+function useCounter() {
+  const { data, mutate } = useSWR('state', () => window.count)
+  return {
+    data, mutate: (count) => {
+      window.count = count
+      return mutate()
+    }
+  }
 }
 
-function Counter(){
-  const {data, mutate} = useCounter()
-  
+function Counter() {
+  const { data, mutate } = useCounter()
+
   const handleInc = () => mutate(data + 1)
   const handleDec = () => mutate(data - 1)
 
   return (
-      <div>
-        <span>count: {data}</span>
-        <button onClick={handleInc}>inc</button>
-        <button onClick={handleDec}>dec</button>
-      </div>
+    <div>
+      <span>count: {data}</span>
+      <button onClick={handleInc}>inc</button>
+      <button onClick={handleDec}>dec</button>
+    </div>
   )
 }
 ```

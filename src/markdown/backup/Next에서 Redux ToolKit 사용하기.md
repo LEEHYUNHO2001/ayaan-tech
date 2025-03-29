@@ -33,7 +33,7 @@ yarn add redux-devtools-extension redux-logger yarn add @types/redux-logger --de
 import { combineReducers } from '@reduxjs/toolkit';
 import { Action } from '@/types/state/Action';
 import { HYDRATE } from 'next-redux-wrapper';
-import { CombinedState } from 'redux';
+import { CombinedState } from 'src/markdown/backup/Redux';
 import A_Data from './A_Data';
 import B_Data from './B_Data';
 

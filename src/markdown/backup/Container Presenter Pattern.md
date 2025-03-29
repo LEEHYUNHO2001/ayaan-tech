@@ -64,7 +64,7 @@ Container에서는 state를 설정하고, api를 이용하여 데이터를 가�
 ```js
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled from "src/markdown/backup/styled-components";
 
 import Section from "Components/Section";
 
@@ -72,16 +72,16 @@ const Container = styled.div`
     padding: 10px;
 `;
 
-const Presenter = ({ information,error,loading}) => loading ? null :
-<Container>
-    {information && information.length > 0 && 
-    <Section title="Information">{information.map(v => v.title)}</Section>}
-</Container>;
+const Presenter = ({ information, error, loading }) => loading ? null :
+  <Container>
+    {information && information.length > 0 &&
+      <Section title="Information">{information.map(v => v.title)}</Section>}
+  </Container>;
 
 HomePresenter.propTypes = {
-    information:PropTypes.array,
-    error:PropTypes.string,
-    loading:PropTypes.bool.isRequired,
+  information: PropTypes.array,
+  error: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
 }
 
 export default Presenter;

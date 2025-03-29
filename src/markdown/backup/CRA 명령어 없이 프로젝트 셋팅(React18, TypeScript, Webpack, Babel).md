@@ -306,7 +306,7 @@ clean-webpack-plugin : 번들링을 할 때마다 이전 번들링 결과를 제
 //webpack.common.js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-const webpack = require("webpack");
+const webpack = require("src/markdown/backup/Webpack");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
