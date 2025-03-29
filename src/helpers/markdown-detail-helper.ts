@@ -9,7 +9,7 @@ import {
   MarkdownFrontMatterModel,
 } from "@/helpers/markdown-matter-helper";
 import {
-  getBlogDirectory,
+  getBlogBackupDirectory,
   REGEX_FIRST_THREE_DASH_BLOCK,
 } from "@/helpers/markdown-common-helper";
 
@@ -26,7 +26,7 @@ const removeMatter: (fileContent: string) => string = replace(
 export const getMarkdownContentWithoutMatter = async (
   fileName: string
 ): Promise<MarkdownContentModel> => {
-  const filePath = path.join(getBlogDirectory(), `${fileName}.md`);
+  const filePath = path.join(getBlogBackupDirectory(), `${fileName}.md`);
 
   if (!fs.existsSync(filePath)) {
     throw new Error("FilePath Not Found");

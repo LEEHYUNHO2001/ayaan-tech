@@ -40,7 +40,7 @@ undefined원하는 부분에서 action을 보내면, reducer가 data state값을
 //store 정의
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import { createStore } from 'src/markdown/backup/Redux';
 import { Provider } from 'react-redux';
 
 import App from './App';
@@ -50,7 +50,7 @@ const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-  	<App />
+    <App/>
   </Provider>,
   document.getElementById('root')
 );

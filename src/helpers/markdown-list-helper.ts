@@ -7,7 +7,7 @@ import {
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
 } from "@/helpers/markdown-matter-helper";
-import { getBlogDirectory } from "@/helpers/markdown-common-helper";
+import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
 
 export interface BlogPostMeta extends MarkdownFrontMatterModel {
   name: string;
@@ -15,12 +15,12 @@ export interface BlogPostMeta extends MarkdownFrontMatterModel {
 }
 
 const getBlogPostFullNameList = (): string[] =>
-  fs.readdirSync(getBlogDirectory());
+  fs.readdirSync(getBlogBackupDirectory());
 
 const removeMarkdownExtension = replace(/\.md$/, "");
 
 const getBlogPostMetaData = (fileFullName: string): BlogPostMeta => {
-  const filePath = path.join(getBlogDirectory(), fileFullName);
+  const filePath = path.join(getBlogBackupDirectory(), fileFullName);
   const fileContent = fs.readFileSync(filePath, "utf-8");
   const frontMatter = extractFrontMatter(fileContent);
 

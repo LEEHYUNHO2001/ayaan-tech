@@ -77,46 +77,47 @@ babel-polyfill 패키지 쓰기에는 너무 무거우므로, 사이트들어가
 ```js
 //pages/.document.js
 import React from 'react';
-import Document, {Html, Head, Main, NextScript} from 'next/document';
-import {ServerStyleSheet} from 'styled-components';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'src/markdown/backup/styled-components';
 
-export default class MyDocument extends Document{
-    static async getInitialProps(ctx){
-        const sheet = new ServerStyleSheet();
-        const originalRenderPage = ctx.renderPage;
-        
-        try{
-            ctx.renderPage = () => originalRenderPage({
-                enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
-            });
-            const initialProps = await Document.getInitialProps(ctx);
-            return {
-                ...initialProps,
-                styles: (
-                    <>
-                        {initialProps.styles}
-                        {sheet.getStyleElement()}
-                    </>
-                )
-            };
-        } catch(error){
-            console.error(error)
-        } finally{
-            sheet.seal();
-        }
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
+    try {
+      ctx.renderPage = () => originalRenderPage({
+        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+      });
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      };
+    } catch (error) {
+      console.error(error)
+    } finally {
+      sheet.seal();
     }
 
-    render(){
-        <Html>
-            <Head />
-            <body>
-                <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2Ces2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019"/>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    }
+  }
+
+  render() {
+    <Html>
+      <Head/>
+      <body>
+        <script
+          src="https://polyfill.io/v3/polyfill.min.js?features=default%2Ces2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019"/>
+        <Main/>
+        <NextScript/>
+      </body>
+    </Html>
+  }
 }
 ```
 원래 document 기능 앱에다가 styled-components를 서버사이드랜더링가능하게 해주었다.

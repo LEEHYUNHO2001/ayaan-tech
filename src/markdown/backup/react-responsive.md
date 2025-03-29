@@ -52,12 +52,11 @@ yarn add @types/react-responsive
 
 ### useMediaQuery 조건부 렌더링
 
-
 ```jsx
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'src/markdown/backup/react-responsive'
 
-const isPC = useMediaQuery ({
-query : "(min-width : 768px) and (max-width :1920px)"
+const isPC = useMediaQuery({
+  query: "(min-width : 768px) and (max-width :1920px)"
 });
 ```
 
@@ -68,20 +67,20 @@ useMediaQuery라는 Hooks를 사용할 수 있다. query에 min값이나 max값 
 <br>
 
 ```jsx
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'src/markdown/backup/react-responsive'
 
 const Example = () => {
-  const isPC = = useMediaQuery ({query : "(min-width : 768px)"});
+  const isPC = = useMediaQuery({ query: "(min-width : 768px)" });
 
   const text = isPC ? "컴퓨터" : "모바일";
   return (
     <Container>
-        {!isPC && <img src="sorce" alt="이미지">}
+      {!isPC && <img src="sorce" alt="이미지">}
         {text}
         <Component />
-    </Container>
-  )
-}
+      </Container>
+        )
+      }
 ```
 
 이미지는 모바일에서만 보일 것이고, 뷰포트에 맞게 isPC값을 이용하여 text를 초기화하고 렌더링 해줄 것이다.
@@ -93,12 +92,12 @@ react-responsive를 사용하면 이렇게 조건부 렌더링으로 해결할 �
 <br>
 
 ```jsx
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'src/markdown/backup/react-responsive'
 
 const Example = () => {
   const isDesktopOrLaptop = useMediaQuery(
-     { minDeviceWidth: 1224 },
-     { deviceWidth: 1600 } // `device` prop
+    { minDeviceWidth: 1224 },
+    { deviceWidth: 1600 } // `device` prop
   )
 
   return (
@@ -122,7 +121,7 @@ const Example = () => {
 
 ```jsx
 import React from 'react'
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'src/markdown/backup/react-responsive'
 
 const Example = () => {
 
@@ -130,7 +129,7 @@ const Example = () => {
     // matches will be true or false based on the value for the media query
   }
   const isDesktopOrLaptop = useMediaQuery(
-    { minWidth: 1224 }, undefined,  handleMediaQueryChange
+    { minWidth: 1224 }, undefined, handleMediaQueryChange
   );
 
   return (
@@ -147,7 +146,7 @@ isDesktopOrLaptop에 따라 호출 될 핸들러를 설정할 수 있다. 이것
 
 ```jsx
 import React from 'react'
-import MediaQuery from 'react-responsive'
+import MediaQuery from 'src/markdown/backup/react-responsive'
 
 const Example = () => {
 
@@ -170,8 +169,8 @@ const Example = () => {
 ### Easy Mode
 
 ```jsx
-import { useMediaQuery } from 'react-responsive'
- 
+import { useMediaQuery } from 'src/markdown/backup/react-responsive'
+
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 })
   return isDesktop ? children : null
@@ -188,7 +187,7 @@ const Default = ({ children }) => {
   const isNotMobile = useMediaQuery({ minWidth: 768 })
   return isNotMobile ? children : null
 }
- 
+
 const Example = () => (
   <div>
     <Desktop>Desktop or laptop</Desktop>
@@ -197,7 +196,7 @@ const Example = () => (
     <Default>Not mobile (desktop or laptop or tablet)</Default>
   </div>
 )
- 
+
 export default Example
 ```
 
