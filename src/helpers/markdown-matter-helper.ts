@@ -1,4 +1,4 @@
-import { REGEX_FIRST_THREE_DASH_BLOCK } from "@/helpers/markdown-common-helper";
+export const REGEX_FIRST_THREE_DASH_BLOCK = /^---\s*([\s\S]+?)\s*---/;
 
 export interface MarkdownFrontMatterModel {
   title: string;

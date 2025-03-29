@@ -7,11 +7,9 @@ import {
   extractFrontMatter,
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
-} from "@/helpers/markdown-matter-helper";
-import {
-  getBlogBackupDirectory,
   REGEX_FIRST_THREE_DASH_BLOCK,
-} from "@/helpers/markdown-common-helper";
+} from "@/helpers/markdown-matter-helper";
+import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
 
 export interface MarkdownContentModel extends MarkdownFrontMatterModel {
   content: string;
