@@ -1,3 +1,5 @@
+import { REGEX_FIRST_THREE_DASH_BLOCK } from "@/helpers/markdown-common-helper";
+
 export interface MarkdownFrontMatterModel {
   title: string;
   description: string;
@@ -5,7 +7,6 @@ export interface MarkdownFrontMatterModel {
   date: string;
 }
 
-export const REGEX_FIRST_THREE_DASH_BLOCK = /^---\s*([\s\S]+?)\s*---/;
 const REGEX_DATE = /date:\s*([^\n]+)/;
 const REGEX_TAG_LIST = /tags:\s*\[(.+?)\]/;
 

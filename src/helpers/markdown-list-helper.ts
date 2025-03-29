@@ -7,15 +7,12 @@ import {
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
 } from "@/helpers/markdown-matter-helper";
+import { getBlogDirectory } from "@/helpers/markdown-common-helper";
 
 export interface BlogPostMeta extends MarkdownFrontMatterModel {
   name: string;
   dayjs: Dayjs;
 }
-
-// Velog 백업 파일이 있는 디렉터리
-export const getBlogDirectory = (): string =>
-  path.join(process.cwd(), "src", "backup", "content");
 
 const getBlogPostFullNameList = (): string[] =>
   fs.readdirSync(getBlogDirectory());

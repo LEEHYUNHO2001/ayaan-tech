@@ -3,13 +3,15 @@ import fs from "fs";
 import { remark } from "remark";
 import html from "remark-html";
 import { pipe, replace, trim } from "ramda";
-import { getBlogDirectory } from "@/helpers/markdown-list-helper";
 import {
   extractFrontMatter,
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
-  REGEX_FIRST_THREE_DASH_BLOCK,
 } from "@/helpers/markdown-matter-helper";
+import {
+  getBlogDirectory,
+  REGEX_FIRST_THREE_DASH_BLOCK,
+} from "@/helpers/markdown-common-helper";
 
 export interface MarkdownContentModel extends MarkdownFrontMatterModel {
   content: string;
@@ -21,7 +23,7 @@ const removeMatter: (fileContent: string) => string = replace(
 );
 
 // 마크다운 파일을 읽어서 HTML로 변환
-export const getMarkdownContent = async (
+export const getMarkdownContentWithoutMatter = async (
   fileName: string
 ): Promise<MarkdownContentModel> => {
   const filePath = path.join(getBlogDirectory(), `${fileName}.md`);
