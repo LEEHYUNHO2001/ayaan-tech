@@ -1,9 +1,7 @@
 import type { Config } from "tailwindcss";
-// import daisyui from "daisyui";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -31,16 +29,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily: {
-        main: ["Pretendard", "Roboto", "Noto Sans KR", "sans-serif"],
-        other: ["Roboto", "Noto Sans KR", "sans-serif"],
-      },
-      // 새로운 폰트 사이즈 추가
-      fontSize: {
-        "2rem": "2rem",
-        "2.5rem": "2.5rem",
-      },
+      // fontFamily: {
+      //   main: ["Pretendard", "Roboto", "Noto Sans KR", "sans-serif"],
+      //   other: ["Roboto", "Noto Sans KR", "sans-serif"],
+      // },
     },
   },
-  // plugins: [daisyui],
 } satisfies Config;
