@@ -6,19 +6,19 @@ tags: ["git","github"]
 ---
 > ## Git push Error
 
-undefined
+![](/images/ee33c848-a917-477c-8cf3-299909d347af-error.jpg)
 
 평소처럼 **git push**를 하는데 **에러**가 발생했다. 에러의 원인은 2021년 8월 13일부터 **패스워드 기반 인증을 지원하지 않기 때문**이다. 깃 토큰 인증을 통해 이 문제를 해결했다.
 
 > ## 깃 토큰 인증
 
-undefined
+![](/images/1c3e0baa-0514-462b-bd16-0678d22d7025-1.jpg)
 
 1. 깃허브 로그인 후 **우측 상단 프로필의 Settings**로 들어간다. 그 후 좌측 메뉴에서 **Developer settings**을 클릭하자.
 
 <br />
 
-undefined
+![](/images/9840244c-aa55-4989-8161-8a0e0fa800bc-ge.jpg)
 
 2. 좌측 메뉴 **personal access token**에서 **Generate new token**을 눌러 토큰을 생성한다. 설정들이 있는데 본인은 **repo만 선택**해 주었다.
 
@@ -28,7 +28,7 @@ undefined
 
 <br />
 
-undefined
+![](/images/f713fd8e-24b6-4017-b6fe-1f8d8e04eecf-sfdsdf.jpg)
 
 4. 이제 vscode 터미널창에서 다시 push를 해준다. Password 입력란에는 ctrl + shift + v 단축키를 누르고 엔터를 입력하면 토큰이 입력된다.
 

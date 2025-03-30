@@ -104,7 +104,7 @@ onClickBtn은 type으로 이전 버튼인지 다음 버튼인지 구별하며, �
 
 ### 하단 시리즈 캐러샐
 
-undefined
+![](/images/c0c88bf1-b24d-4c05-a7c5-306a44e3e4ea-tt.gif)
 
 이제 하단 캐러샐에 시리즈 데이터들을 연결해보자.
 

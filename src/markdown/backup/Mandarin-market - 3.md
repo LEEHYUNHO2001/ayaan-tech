@@ -8,7 +8,7 @@ tags: ["CSS","React","next","typescript"]
 
 ### 헤더와 캐러샐 버그
 
-undefined
+![](/images/44c16190-b69e-41cd-a963-24d406986605-sss.gif)
 
 이전 글에서 캐러샐이 헤더위에 오는 순간 헤더 위에 위치하는 버그가 발생했었다. 이 부분을 해결하기 위해 헤더와 레이아웃의 statusBar에 `z-index`값을 주어 해결했다.
 

@@ -12,11 +12,11 @@ React로 개발하다보면 컴포넌트간 상태관리는 필수이다. Contex
 
 * Redux 문제점
 
-undefined
+![](/images/02dc0a74-c5fd-440e-b41d-b2737e94402e-%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202021-09-13%20105004.jpg)
 
 하지만 위의 경우만 봐도 기능을 구현하기 위한 Request 하나에 성공, 실패까지 액션을 만들면 3개다. state도 3개 만들어주고, switch에서 case도 3개만들어주어야 한다. 
 
-undefined
+![](/images/ba8c2dc6-cd67-4673-8df9-78e0f8bb952b-%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202021-09-13%20105435.jpg)
 
 비동기 처리를 위해 saga를 사용하면 제너레이터 함수와 그에 맞는 API들도 생성해주어야한다. 이렇게 생성한 로그아웃 기능을 사용할 컴포넌트에서 dispatch하면된다.
 
@@ -50,17 +50,17 @@ Stale-While-Revalidate
 <br />
 
 ```jsx
-import useSWR from 'src/markdown/backup/SWR'
+import useSWR from 'swr'
 
-function Point() {
-  const { data, error } = useSWR('/api/points', url => {
+function Point(){
+  const {data, error} = useSWR('/api/points', url => {
     return fetch(url).then(res => res.json())
   })
-
-  if (error) {
+  
+  if(error){
     return <div>failed to load</div>
   }
-  if (!data) {
+  if(!data){
     return <div>Loading..</div>
   }
   return <div>{data}</div>
@@ -78,34 +78,34 @@ function Point() {
 <br />
 
 ```jsx
-import useSWR from 'src/markdown/backup/SWR'
+import useSWR from 'swr'
 
 const Profile = () => {
-  const fetcher = (url) => axios.get(url).then((result) => result.data);
-  const { data: followersData, error: followerError } = useSWR(
-    `/user/followers`, fetcher);
-  const { data: followingsData, error: followingError } = useSWR(
-    `/user/followings`, fetcher);
+    const fetcher = (url) => axios.get(url).then((result) => result.data);
+    const {data:followersData, error:followerError} = useSWR(
+        `/user/followers`, fetcher);
+    const {data:followingsData, error:followingError} = useSWR(
+        `/user/followings`, fetcher);
 
-  if (followerError || followingError) {
-    console.error(followerError || followingError);
-    return '팔로잉/팔로워 로딩 중 에러가 발생했습니다.';
-  }
+    if(followerError || followingError){
+        console.error(followerError || followingError);
+        return '팔로잉/팔로워 로딩 중 에러가 발생했습니다.';
+    }
 
-  return (
-    <>
-      <Head>
-        <title>내 프로필</title>
-      </Head>
-      <AppLayout>
-        <NicknameEditForm />
-        <FollowList header="팔로잉" data={followingsData}
-                    loading={!followingsData && !followingError} />
-        <FollowList header="팔로워" data={followersData}
-                    loading={!followersData && !followerError} />
-      </AppLayout>
-    </>
-  );
+    return(
+        <>
+            <Head>
+                <title>내 프로필</title>
+            </Head>
+            <AppLayout>
+                <NicknameEditForm />
+                <FollowList header="팔로잉" data={followingsData} 
+                loading={!followingsData && !followingError}/>
+                <FollowList header="팔로워" data={followersData} 
+                loading={!followersData && !followerError}/>
+            </AppLayout>
+        </>
+    );
 };
 }
 ```
@@ -126,30 +126,28 @@ const Profile = () => {
 <br />
 
 ```jsx
-import useSWR from 'src/markdown/backup/SWR'
+import useSWR from 'swr'
 
-function useCounter() {
-  const { data, mutate } = useSWR('state', () => window.count)
-  return {
-    data, mutate: (count) => {
-      window.count = count
-      return mutate()
-    }
-  }
+function useCounter(){
+  const {data, mutate} = useSWR('state', () => window.count)
+  return {data, mutate: (count) => {
+    window.count = count
+    return mutate()
+  }}
 }
 
-function Counter() {
-  const { data, mutate } = useCounter()
-
+function Counter(){
+  const {data, mutate} = useCounter()
+  
   const handleInc = () => mutate(data + 1)
   const handleDec = () => mutate(data - 1)
 
   return (
-    <div>
-      <span>count: {data}</span>
-      <button onClick={handleInc}>inc</button>
-      <button onClick={handleDec}>dec</button>
-    </div>
+      <div>
+        <span>count: {data}</span>
+        <button onClick={handleInc}>inc</button>
+        <button onClick={handleDec}>dec</button>
+      </div>
   )
 }
 ```

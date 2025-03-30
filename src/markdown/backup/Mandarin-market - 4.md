@@ -159,7 +159,7 @@ email과 password 를 입력하는 input을 감싼 form 태그에 `onChage={logi
 
 로그인이 성공하면 `[...nextauth].ts`에서 res.data.user가 생기며 user를 리턴하고 token을 리턴하며 session을 리턴하게 된다. 세션이 생성되는 것이다.
 
-undefined
+![](/images/322be5f3-7f69-4286-b5d0-4a9d7f161680-g.gif)
 
 로그인이 성공하여 home으로 이동하고있다.
 

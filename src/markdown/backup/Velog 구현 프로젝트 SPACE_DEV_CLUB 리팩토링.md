@@ -196,7 +196,7 @@ mark down에서 추출한 헤더들이 listData에 저장될 수 있도록 구�
 
 이제 titleId를 이용하여 유저가 Navigation에서 제목들을 클릭했을 경우 해당 위치로 스크롤이 이동할 수 있도록 `handleHeaderScroll` 함수를 생성해주면 된다.
 
-undefined
+![](/images/913f7e89-ee2b-4fea-a05c-526444bfd94c-image.gif)
 
 잘 동작하는 것을 보니 id값이 잘 추출된 것 같다.
 
@@ -240,7 +240,7 @@ undefined
 
 <br>
 
-undefined
+![](/images/385785b1-e0e6-48a9-8f8a-1b1d27db9692-image.gif)
 
 리팩토링 하면서 Navigation 기능에 버그를 해결했지만 만족스럽지 못했다. 그 이유는 이와 같이 설계하면, Navigation이 **스크롤을 할때마다 렌더링**을 해버리기 때문이다. 그래서`IntersectionObserver`을 이용한 Custom Hook을 생성해서 처리하려고 했다. 하지만 현재 상황을 생각해보면 나는 Navigation을 설계하고 있는 것이고 DOM은 viewer가 알아서 만들어 버린다. 
 
@@ -279,7 +279,7 @@ useEffect(() => {
 
 Navigation의 아이템(헤더)마다 현재 읽혔는지에 대한 상태인 `isReadHeader`를 추가했다. 그리고 현재 스크롤값은 `ref`값을 이용하며 `isRead`함수 상태를 체크한다. throttle의 2번째 인자인 250은 0.25초를 의미한다. 이 핸들러를 리스너의 함수로 넣어주면 끝이다.
 
-undefined
+![](/images/c6da2546-448b-40ee-b3c7-9f8f37a628d6-image.gif)
 
 이제 0.25초라는 시간 안에서 스크롤을 아무리 많이 해도 스크롤 감지는 한 번만 하게 된다. **throttle에 useMemo를 사용하여 조금 더 효율성을 추구했고, 이전과 달리 ref값을 사용하기 때문에 re-render도 대폭 줄었다.**
 
@@ -335,7 +335,7 @@ Strapi 특성상 depth가 좀 깊다보니 코드가 더 길어보인다. 또한
 
 Endpoint에 Filter 옵션을 사용하니 너무 편안해졌다. 이 좋은 기능을 과거에는 왜 사용하지 않았을까.. 분명 데이터를 쓰기 좋게 만들기 위해서 transform하는 과정에서 과거에 삽질도 했던거 같은데..
 
-undefined
+![](/images/e0bb79a5-b25f-46f5-9fb1-b170933a11f5-image.jpg)
 
 그래도 그때의 경험이 있기에 지금이 있는게 아닐까?!
 
@@ -384,7 +384,7 @@ export const useGetLikeData = async (
 
 ### postLike와 deleteLike
 
-undefined
+![](/images/c8f1bddd-29f2-4558-ba2f-c54d127b809f-image.gif)
 
 좋아요를 누르지 않았던 유저가 좋아요를 클릭할 경우 숫자가 1증가하고 색칠된 하트로 UI가 변경되야 한다. 좋아요를 눌렀던 유저라면 숫자가 1감소하고 색칠되지 않은 하트 UI로 변경되야 한다. 이 두개의 함수를 **swr의 mutate**를 이용하여 구현했다.
 
@@ -488,7 +488,7 @@ Velog를 보면 게시글의 상단에 시리즈를 나타내는 UI가 있다. �
 
 <br>
 
-undefined
+![](/images/6cf48e4f-ca16-4b67-904c-66ee3ca8d51b-image.gif)
 
 목록 보기를 눌렀을 때, 숨기기 버튼으로 UI가 변경되며 시리즈의 글 목록을 확인할 수 있다. 현재 글의 위치도 표시된다.
 
@@ -637,7 +637,7 @@ UI를 출력할 때 이 그룹핑된 데이터를 사용한다.`map`으로 댓�
 
 #### commentMoreBtnInit
 
-undefined
+![](/images/c154f0da-ee8e-47de-91bd-533fc28df73b-image.gif)
 
 마지막으로 `commentMoreBtnInit`이다. `groupByComments`에서 언급했던 대댓글을 위한 UI가 여기서 이어진다. 첫 번재 댓글의 대댓글만 보고 싶은데, 첫 번째 댓글의 대댓글을 펼치는 경우 다른 댓글의 대댓글도 펼쳐진다면 UX가 좋지 않다. 이 함수는 **댓글에서 대댓글을 펼칠지에 대한 boolean값**을 배열로 가지고 있다.
 

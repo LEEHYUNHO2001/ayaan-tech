@@ -88,7 +88,7 @@ jquery-3.x : Promises와 ajax, when, data 등 여러 최신 플러그인과 HTML
     </script>
 ```
 
-undefined
+![](/images/e63c6e66-a0f4-42fa-94ff-ce952ecec1df-sddsd.gif)
 
 **html()**은 선택한 요소의 html코드를 설정하거나 받아온다.
 **text()**는 선택한 요소의 텍스트 내용을 받아온다.
@@ -268,6 +268,6 @@ append는 ul2 자식의 마지막에 prepend는 첫부분에 무언가를 추가
 </body>
 ```
 
-undefined
+![](/images/3a94addd-c808-4f37-8f9b-dbdba2eb857f-ghffgfg.gif)
 
 DOM이 준비되면 함수가 실행된다. `div`태그를 클릭하면 `hide()`해주고 있다.

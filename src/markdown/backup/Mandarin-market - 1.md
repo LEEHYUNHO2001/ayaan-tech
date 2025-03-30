@@ -70,13 +70,13 @@ MyProfile에서 나의 정보를 표시해주는 부분 부터 보자. UI만 먼
 
 모달을 생성하기 위해 점점점을 누르면 myProfileModal값이 true가 되고 모달이 나타날 수 있도록 render부분에 `{myProfileModal && 모달}` 방식으로 구현했다.
 
-undefined
+![](/images/44fa4b0c-56d1-46ac-ba77-0d06aa3513e1-dgdgdgf.gif)
 
 생성된 모달은 스크롤을 내려도 하단에 있어야 한다.
 
 헤더에 `position: fixed;`을 주고, 그 안에 모달 요소를 생성하여 `position: absolute;`을 주었다. 그리고 bottom값을 설정하여 하단에 위치시켰다.
 
-undefined
+![](/images/2cbadb5c-c373-4aba-bf62-6b2c70d08c34-fghfgh.gif)
 
 마지막으로 모달을 띄우고 닫기 위한 방법이다. 모달 외의 스크린을 누르면 모달창이 닫힐 수 있도록 설계했다.
 
@@ -84,7 +84,7 @@ undefined
 
 <br>
 
-undefined
+![](/images/76181541-11f9-4a39-9601-7c434234bde2-hdgdgf.gif)
 
 점점점을 누르면 나타나는 모달창에서 로그아웃을 누르면 새로운 모달창이 나타나야 한다. 위에서 생성한 모달과 조금 다르지만 기능 자체가 유사하므로 어렵지 않았다.
 
@@ -200,6 +200,6 @@ StackOverflow를 참고하고 VScode에서 기본적으로 제공하는 오류 �
 
 > 마무리
 
-undefined
+![](/images/fc91abc4-2fcd-4e22-8f0e-aa4008d41aad-gggg.gif)
 
 UI를 구현하는 실력도 점점 증가하는것 같다.(꼼수도..)

@@ -103,7 +103,7 @@ return (
 
 `originHeader`는 `아 무 말`, `히히`, `##하하` 와 같이 `contents` 에서 작성한 헤더들이다. 그리고 `headerId`는 h태그에 부여되는 id값이다. 즉, #이 제거되고 공백은 `-`로 대체된 값이다.
 
-undefined
+![](/images/e5e16914-5443-45d4-bf24-b15cb6289171-hkgk.gif)
 
 이제 클릭하면 정상적으로 해당 위치로 스크롤이 이동한다.
 
@@ -111,7 +111,7 @@ undefined
       scroll-behavior: smooth;
 ```
 
-undefined
+![](/images/5f70f03f-f228-4b9d-9fbf-189289b4249f-klkl.gif)
 
 이제 전역 스타일에 smooth 속성을 부여하여 부드럽게 스크롤이 이동하도록 하자.
 
@@ -188,7 +188,7 @@ const List = styled.div<StrNumTheme>`
 
 boolean값에 맞게 CSS를 스타일링 해주면 된다.
 
-undefined
+![](/images/44fdac13-5f09-4cac-9df1-6dd8c24e6a58-gsdg.gif)
 
 위치에 맞게 오른쪽 헤더(목차) 부분이 글씨가 진해지는 것을 볼 수 있다.
 

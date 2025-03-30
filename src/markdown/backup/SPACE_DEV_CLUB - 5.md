@@ -129,7 +129,7 @@ const Img = styled.img`
 
 <br>
 
-undefined
+![](/images/a758a6d8-77af-4ca1-b2d7-687da58de266-%EC%BA%90%EB%9F%AC%EC%85%80.gif)
 
 첫 번째 이미지에서는 왼쪽 버튼이 사라지고, 마지막 이미지에서는 오른쪽 버튼이 사라지도록 설계해주었다. 
 

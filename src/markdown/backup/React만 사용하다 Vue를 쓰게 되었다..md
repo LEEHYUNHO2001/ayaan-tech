@@ -38,7 +38,7 @@ Vue를 사용한다고 달라질 것은 없다. 이제부터 내가 아는 지�
 
 ## 그래서 Vue를 사용하게된 이유는?
 
-undefined
+![](/images/b668f694-bb3f-402a-a124-c41d7b6846ef-image.jpg)
 
 뻔한 레파토리다. 이직하는 회사에서 Vue를 사용하기 때문이다. 이 말을 하기 위해 위의 글이 빌드업이라고 생각할 수 있겠지만 실제로 저런 생각을 했기 때문에 Vue를 사용하는 회사도 지원했던 것이다.
 
@@ -188,7 +188,7 @@ CSS 스타일도 마찬가지로 데이터 바인딩을 한다. 처음에는 기
 </script>
 ```
 
-undefined
+![](/images/793d631f-fcfb-4a24-af91-60af67b78f24-image.gif)
 
 물론 Vue에서도 문법은 조금 다르지만 단방향 데이터 바인딩이 가능하다. `@click`을 클릭 핸들러와 연결해서 사용했더니 정상적으로 동작했다. 이 방법은 클래스 바인딩에도 유용하게 사용된다.
 
@@ -221,7 +221,7 @@ ex) e,preventDefault()는 .stop() 으로 사용 가능
 
 React 관점에서 보면 `이게 동작해?` 라는 생각이 절로 드는 코드다. 왜냐하면 `input`에서 입력한 값을 통해 `name`값을 부여하도록 도와주는 핸들링 함수가 존재하지 않기 때문이다.
 
-undefined
+![](/images/6d466ec3-e032-43aa-bc93-230faf2b48dc-image.gif)
 
 하지만 너무 잘 동작한다. `p`태그 안에서 사용된 `name`이 `input`에 입력한 대로 잘 변경된다. 
 
@@ -316,7 +316,7 @@ export default class HelloWorld extends Vue {
 
 부모 컴포넌트에서 `isClick`이라는 `state`와 `handleClick`이라는 핸들링 함수를 가진다. `isClick`은 `props`로 넘기고, 핸들링 함수는 자식 컴포넌트에서 `Emit`이벤트로 부모에게 데이터를 전달하고 있다.
 
-undefined
+![](/images/7fea8937-0cce-40d3-8290-0acf0af5bd28-image.gif)
 
 정상적으로 동작한다.
 (ts를 사용하다보니 일반적인 vue2레퍼런스와 코드가 다를 수 있다.)

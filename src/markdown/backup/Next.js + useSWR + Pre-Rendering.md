@@ -164,7 +164,7 @@ QnATypeData는 OftenQnA 컴포넌트에서 사용한다.
 
 Disable JavaScript가 된 상태에서 QnA의 타입인 **구매와 판매** 버튼이 나타난 것을 볼 수 있다. 정상적으로 SSG가 적용된 것이다. 구매나 판매에 대한 QnA 목록들은 유동적으로 변경될 수 있기 때문에 SSG로 구현하지 않아 로딩중이 뜨고 있다. 이제 Disable JavaScript 체크박스를 해제해보자.
 
-undefined
+![](/images/5c2b6dd8-87ea-45fb-84a6-92a36bee926e-hhhh.gif)
 
 체크 해제 후 새로고침 해보니 구매와 판매에 대한 QnA 목록들도 CSR 으로 데이터를 잘 받아오게 되었다.
 

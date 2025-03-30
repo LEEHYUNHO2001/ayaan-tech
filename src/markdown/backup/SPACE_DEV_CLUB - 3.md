@@ -41,7 +41,7 @@ tags: ["React","next","typescript"]
 
 <br>
 
-undefined
+![](/images/e78b83c9-afaa-4323-9877-78f915c366ed-sdfhs.gif)
 
 
 **LeftHeader** 와 **RightHeader**부터 보자. 
@@ -263,7 +263,7 @@ const Container = styled.section`
 
 ```
 
-undefined
+![](/images/fd0a425d-66a6-4621-9804-bda0f8a075d7-share.gif)
 
 아직 기능부분은 DB연결이 안되어 있어 부족하지만 UI는 거의 완성된 LeftHeader이다. 사실 위에서 쉽게 얘기했지만 구현하는데 꽤 시간이 걸렸다.
 
@@ -369,7 +369,7 @@ const UDContainer = styled.div`
 `;
 ```
 
-undefined
+![](/images/ec39564f-d5c3-490d-a977-ac6be5651a45-jdg.gif)
 
 어렵지 않은 UI이기 때문에 설명은 생략한다. 태그를 클릭하면 Velog에서 해당 태그를 사용한 게시글을 불러오는 것과 같은 기능들은 다음에 구현하도록 한다.
 
@@ -524,7 +524,7 @@ const Pagination = styled.div`
 `;
 ```
 
-undefined
+![](/images/9a36b4b8-e1f9-4d89-8087-04567122e184-series.gif)
 
 `select` 상태를 이용하여 `목록 보기`와 `숨기기`를 구현했다. `{select ? "숨기기" : "목록 보기"}` 와 같이 말이다.
 

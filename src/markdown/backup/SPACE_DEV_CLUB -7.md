@@ -4,7 +4,7 @@ description: "상세 페이지 UI 리펙토링"
 date: 2022-01-16T07:48:05.267Z
 tags: ["React","next","typescript"]
 ---
-undefined
+![](/images/d15fbfe2-371c-4e97-939f-8d44f4ddd308-ggggggggg.gif)
 
 전체적인 동작은 위와 같다. 전체적인 UI는 Velog의 상세 페이지와 유사하게 설계해주었다. 이전 및 다음 페이지는 Velog와 다르게 캐러셀로 적용해주었다. 
 

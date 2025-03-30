@@ -117,7 +117,7 @@ const WritePage: NextPage = () => {
 };
 ```
 
-undefined
+![](/images/167034c6-be22-4774-adbd-29d98a1f16c0-ed.gif)
 
 간단한 에디터를 구현했다. 뷰어도 구현해보자.
 

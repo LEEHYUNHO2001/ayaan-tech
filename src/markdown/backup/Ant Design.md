@@ -21,11 +21,11 @@ npm i @ant-design/icons
 > ## 사용법
 
 공식 사이트 : https://ant.design/components/menu/
-undefined1. 원하는 디자을 고른다.
+![](/images/239415da-acd1-4c35-9414-5cef64653f23-antd.jpg)1. 원하는 디자을 고른다.
 
-undefined2. <>버튼을 눌러 코드를 표시한다.
+![](/images/add8eae1-7cbb-46c5-b094-da33009c6d5e-a.jpg)2. <>버튼을 눌러 코드를 표시한다.
 
-undefined3.props들을 확인한다.
+![](/images/09db58d2-d378-47b6-bbb9-20b402bd6c34-api.jpg)3.props들을 확인한다.
 ```jsx
 import {Button, Card, Popover, Avatar, List, Comment} from 'antd';
 <Card 
