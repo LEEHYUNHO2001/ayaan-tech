@@ -7,15 +7,15 @@ import {
   getMarkdownFrontMatterModel,
   MarkdownFrontMatterModel,
 } from "@/helpers/backup-markdown-matter-helper";
-import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
+import {
+  getBlogBackupDirectory,
+  getBlogPostFullNameList,
+} from "@/helpers/markdown-common-helper";
 
 export interface BlogPostMeta extends MarkdownFrontMatterModel {
   name: string;
   dayjs: Dayjs;
 }
-
-const getBlogPostFullNameList = (): string[] =>
-  fs.readdirSync(getBlogBackupDirectory());
 
 const removeMarkdownExtension = replace(/\.md$/, "");
 
@@ -42,4 +42,9 @@ const sortPostsByDate = (postList: BlogPostMeta[]): BlogPostMeta[] =>
   postList.sort((a, b) => b.dayjs.valueOf() - a.dayjs.valueOf());
 
 export const getBlogBackupPostList = (): BlogPostMeta[] =>
-  pipe(getBlogPostFullNameList, map(getBlogPostMetaData), sortPostsByDate)();
+  pipe(
+    getBlogBackupDirectory,
+    getBlogPostFullNameList,
+    map(getBlogPostMetaData),
+    sortPostsByDate
+  )();
