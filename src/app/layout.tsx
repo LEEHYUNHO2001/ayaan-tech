@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/providers/theme-provider"; // ✅ 추가
 import "@/styles/global.css";
-import "@/styles/markdown.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,15 +19,13 @@ export const metadata: Metadata = {
   description: "프론트엔드 기술 블로그",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body
+        className={`bg-background text-foreground ${geistSans.variable} ${geistMono.variable}`}
+      >
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
