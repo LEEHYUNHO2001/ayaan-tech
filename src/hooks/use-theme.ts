@@ -1,9 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { pipe, tap } from "ramda";
+import {
+  applyThemeClass,
+  getLocalStorageTheme,
+  initializedTheme,
+  setLocalStorageTheme,
+  ThemeType,
+} from "@/helpers/theme-helper";
 
-export type ThemeType = "light" | "dark";
-type StoredThemeType = ThemeType | null;
 interface UseThemeModel {
   theme: ThemeType;
   toggleTheme: () => void;
@@ -12,36 +18,23 @@ interface UseThemeModel {
 export function useTheme(): UseThemeModel {
   const [theme, setTheme] = useState<ThemeType>("light");
 
-  const isPrefersDark = (): boolean => {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
-  };
-
-  const setLocalStorage = (theme: ThemeType): void => {
-    localStorage.setItem("theme", theme);
-  };
-
-  const getLocalStorageTheme = (): StoredThemeType => {
-    return localStorage.getItem("theme") as StoredThemeType;
-  };
-
-  const setToggleClassTheme = (isDarkTheme: boolean): void => {
-    document.documentElement.classList.toggle("dark", isDarkTheme);
-  };
-
   const toggleTheme = (): void => {
     setTheme((prev: ThemeType) => {
-      const newTheme = prev === "light" ? "dark" : "light";
-      setLocalStorage(newTheme);
-      setToggleClassTheme(newTheme === "dark");
-      return newTheme;
+      return pipe(
+        (): ThemeType => (prev === "light" ? "dark" : "light"),
+        tap(setLocalStorageTheme),
+        tap(applyThemeClass)
+      )();
     });
   };
 
   useEffect(() => {
-    const storedTheme = getLocalStorageTheme();
-    const initialTheme = storedTheme || (isPrefersDark() ? "dark" : "light");
-    setTheme(initialTheme);
-    setToggleClassTheme(initialTheme === "dark");
+    pipe(
+      getLocalStorageTheme,
+      initializedTheme,
+      tap(applyThemeClass),
+      tap(setTheme)
+    )();
   }, []);
 
   return { theme, toggleTheme };
