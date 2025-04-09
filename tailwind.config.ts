@@ -29,6 +29,18 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        black: "var(--black)",
+        grey: "var(--grey)",
+        greyDark: "var(--grey-dark)",
+        greyLight: "var(--grey-light)",
+        secondary: "var(--secondary)",
+        primary: "var(--primary)",
+        primaryActive: "var(--primary-active)",
+        primaryLight: "var(--primary-light)",
+        sky: "var(--sky)",
+        skyLight: "var(--sky-light)",
+        yellow: "var(--yellow)",
+        yellowLight: "var(--yellow-light)",
       },
       // fontFamily: {
       //   main: ["Pretendard", "Roboto", "Noto Sans KR", "sans-serif"],

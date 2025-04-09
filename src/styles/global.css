@@ -8,6 +8,18 @@
 }
 
 .dark {
-  --background: #393B46;
+  --background: #22232A;
+  --black: #000000;
+  --grey: #393B46;
+  --grey-dark: #252627;
+  --grey-light: #B9BBC6;
   --foreground: #ffffff;
+  --secondary: #676A7E;
+  --primary: #9E78FE;
+  --primary-active: #8355F6;
+  --primary-light: #A889F5;
+  --sky: #4CAAFE;
+  --sky-light: #83C3FB;
+  --yellow: #FFA11A;
+  --yellow-light: #FBB551
 }
