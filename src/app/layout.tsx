@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/providers/theme-provider"; // ✅ 추가
 import "@/styles/global.css";
+import { ThemeProvider } from "@/providers/theme-provider"; // ✅ 추가
+import Header from "@/components/Header/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,8 +24,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`bg-background text-foreground ${geistSans.variable} ${geistMono.variable}`}
+        className={`container relative bg-background pt-[72px] text-foreground ${geistSans.variable} ${geistMono.variable}`}
       >
+        <Header />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
