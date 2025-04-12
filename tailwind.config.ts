@@ -11,9 +11,9 @@ export default {
       screens: {
         sm: "640px",
         md: "768px",
-        lg: "992px",
-        xl: "1200px", // ✅ `1280px` → `1200px` 변경
-        "2xl": "1200px", // ✅ 1536px 이상도 1200px 고정
+        lg: "900px",
+        xl: "900px", // ✅ `1280px` → `900px` 변경
+        "2xl": "900px", // ✅ 1536px 이상도 900px 고정
       },
       container: {
         center: true,
@@ -21,9 +21,9 @@ export default {
         screens: {
           sm: "640px",
           md: "768px",
-          lg: "992px", // Tablet. 1024px -> 992px.
-          xl: "1200px", // Desktop. 1280px -> 1200px.
-          "2xl": "1200px", // 1536px 이상도 1200px 고정.
+          lg: "900px", // Tablet. 1024px -> 900px.
+          xl: "900px", // Desktop. 1280px -> 900px.
+          "2xl": "900px", // 1536px 이상도 900px 고정.
         },
       },
       colors: {
