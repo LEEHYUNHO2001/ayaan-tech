@@ -1,10 +1,12 @@
+import { FC, JSX } from "react";
+
 interface TagProps {
   label: string;
   active?: boolean;
   onClick?: () => void;
 }
 
-export default function Tag({ label, active = false, onClick }: TagProps) {
+const Tag: FC<TagProps> = ({ label, active = false, onClick }): JSX.Element => {
   return (
     <div
       className={`rounded-[100px] px-3 py-1 text-sm font-medium ${active ? "bg-grey" : "cursor-pointer"}`}
@@ -13,4 +15,6 @@ export default function Tag({ label, active = false, onClick }: TagProps) {
       {label}
     </div>
   );
-}
+};
+
+export default Tag;

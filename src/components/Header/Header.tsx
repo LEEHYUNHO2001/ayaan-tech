@@ -3,8 +3,9 @@
 import { useRouter, usePathname } from "next/navigation";
 import Tag from "@/components/Tag/Tag";
 import { HEADER_MENU_LIST, HeaderMenu } from "@/constants/header";
+import { FC, JSX } from "react";
 
-export default function Header() {
+const Header: FC = (): JSX.Element => {
   const router = useRouter();
   const pathname = usePathname();
 
@@ -47,4 +48,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
