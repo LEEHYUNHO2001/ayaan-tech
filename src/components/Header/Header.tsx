@@ -19,8 +19,7 @@ const Header: FC = (): JSX.Element => {
     router.push("/");
   };
 
-  const isSamePathCurrentPage = (path: string): boolean =>
-    pathname.startsWith(path);
+  const isSamePathCurrentPage = (path: string): boolean => pathname === path;
 
   const isHomePath = (): boolean => {
     return pathname === "/" || pathname === "";
