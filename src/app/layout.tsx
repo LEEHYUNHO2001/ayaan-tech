@@ -9,7 +9,7 @@ import "@/styles/markdown.css";
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // 필요 시 조정
+  weight: ["100", "200", "300", "400", "500", "600", "700"], // 필요 시 조정
   display: "swap",
 });
 
