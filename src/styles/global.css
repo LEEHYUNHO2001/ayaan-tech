@@ -15,11 +15,21 @@
   --grey-light: #B9BBC6;
   --foreground: #ffffff;
   --secondary: #676A7E;
-  --primary: #9E78FE;
-  --primary-active: #8355F6;
-  --primary-light: #A889F5;
+
   --sky: #4CAAFE;
+  --sky-mid: #69B7FA;
   --sky-light: #83C3FB;
   --yellow: #FFA11A;
-  --yellow-light: #FBB551
-}
+  --yellow-mid: #FDB43E;
+  --yellow-light: #FBB551;
+  --green: #4ADE80;
+  --green-mid: #6FEF98;
+  --green-light: #86EFAC;
+  --purple: #9E78FE;
+  --purple-mid: #8355F6;
+  --purple-light: #A889F5;
+
+  --primary: var(--green);
+  --primary-active: var(--green-mid);
+  --primary-light: var(--green-light);
+ }
