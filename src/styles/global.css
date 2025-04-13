@@ -29,7 +29,7 @@
   --purple-mid: #8355F6;
   --purple-light: #A889F5;
 
-  --primary: var(--green);
-  --primary-active: var(--green-mid);
-  --primary-light: var(--green-light);
+  --primary: var(--purple);
+  --primary-active: var(--purple-mid);
+  --primary-light: var(--purple-light);
  }
