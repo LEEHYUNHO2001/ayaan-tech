@@ -1,68 +1,70 @@
-/* 마크다운 렌더링 스타일 */
-article {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-}
+.blog-post {
+    /* 마크다운 렌더링 스타일 */
+    article {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+    }
 
-h1, h2, h3 {
-    font-family: 'Georgia', serif;
-    color: #333;
-}
+    h1, h2, h3 {
+        font-family: 'Georgia', serif;
+        color: #333;
+    }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
+    p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
 
-ul, ol {
-    margin-left: 20px;
-}
+    ul, ol {
+        margin-left: 20px;
+    }
 
-ul li, ol li {
-    margin-bottom: 10px;
-}
+    ul li, ol li {
+        margin-bottom: 10px;
+    }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-}
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
 
-code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f5f5f5;
-    padding: 5px;
-    border-radius: 4px;
-}
+    code {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #f5f5f5;
+        padding: 5px;
+        border-radius: 4px;
+    }
 
-pre code {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border-radius: 4px;
-    display: block;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
+    pre code {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        display: block;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
 
-/* 블록 인용 스타일 */
-blockquote {
-    padding: 10px 20px;
-    margin: 20px 0;
-    border-left: 5px solid #4CAF50; /* 왼쪽에 보더 추가 */
-    background-color: #f9f9f9; /* 배경색 */
-    color: #333; /* 텍스트 색상 */
-    font-style: italic; /* 이탤릭체 */
-}
+    /* 블록 인용 스타일 */
+    blockquote {
+        padding: 10px 20px;
+        margin: 20px 0;
+        border-left: 5px solid #4CAF50; /* 왼쪽에 보더 추가 */
+        background-color: #f9f9f9; /* 배경색 */
+        color: #333; /* 텍스트 색상 */
+        font-style: italic; /* 이탤릭체 */
+    }
 
-blockquote p {
-    margin: 0; /* 블록 내 불필요한 여백 제거 */
-}
+    blockquote p {
+        margin: 0; /* 블록 내 불필요한 여백 제거 */
+    }
 
-blockquote footer {
-    font-size: 0.9em;
-    color: #666; /* 인용문 출처 색상 */
+    blockquote footer {
+        font-size: 0.9em;
+        color: #666; /* 인용문 출처 색상 */
+    }
 }
