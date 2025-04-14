@@ -1,6 +1,7 @@
 import path from "path";
 import fs from "fs";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 import { pipe, replace, trim } from "ramda";
 import {
@@ -40,7 +41,10 @@ export const getBackupMarkdownContentWithoutMatter = async (
   const frontMatterModel = getMarkdownFrontMatterModel(frontMatter);
 
   const markdownBody = pipe(removeMatter, trim)(fileContent);
-  const processedContent = await remark().use(html).process(markdownBody);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html)
+    .process(markdownBody);
 
   return {
     ...frontMatterModel,
