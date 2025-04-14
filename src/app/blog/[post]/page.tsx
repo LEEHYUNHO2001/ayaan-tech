@@ -36,9 +36,10 @@ export default async function BlogPostPage({
   }
 
   return (
-    <article>
-      <h1>{decodedPost}</h1>
+    <article className="py-10">
+      <h1 className="mb-10 border-b pb-5 text-4xl font-bold">{decodedPost}</h1>
       <div
+        className="blog-post__contents"
         dangerouslySetInnerHTML={{
           __html: content,
         }}
