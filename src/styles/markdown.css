@@ -1,3 +1,5 @@
+@import 'highlight.js/styles/night-owl.css';
+
 .blog-post {
     .blog-post__contents {
         h1, h2, h3, h4 {
@@ -25,7 +27,7 @@
         }
 
         p {
-            @apply leading-6 mb-5 text-greyLight;
+            @apply leading-7 mb-5 text-greyLight;
 
         }
 
@@ -38,15 +40,19 @@
         }
 
         ul li, ol li {
-            @apply mb-2 list-disc;
+            @apply mb-2 list-disc text-greyLight;
         }
 
         img {
-            @apply my-5 rounded-lg h-auto max-w-full;
+            @apply my-5 rounded-lg h-auto max-w-full mx-auto;
         }
 
         code {
             @apply bg-black py-1 px-2 rounded-md;
+        }
+
+        pre code {
+            @apply bg-black mt-3 mb-5;
         }
 
         /* 블록 인용 스타일 */
@@ -60,6 +66,27 @@
 
         blockquote footer {
             @apply text-sm;
+        }
+
+        table {
+            @apply text-greyLight w-full border-collapse my-5;
+        }
+
+        th,
+        td {
+            @apply border border-secondary p-3 text-left;
+
+            strong {
+                @apply font-normal;
+            }
+        }
+
+        thead {
+            @apply bg-[#2D2F39];
+        }
+
+        tbody tr:nth-child(even) {
+            @apply bg-[#393B46];
         }
     }
 }

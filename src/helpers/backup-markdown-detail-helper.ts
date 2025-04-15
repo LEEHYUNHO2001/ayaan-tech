@@ -2,7 +2,9 @@ import path from "path";
 import fs from "fs";
 import { remark } from "remark";
 import remarkGfm from "remark-gfm";
-import html from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
 import { pipe, replace, trim } from "ramda";
 import {
   extractFrontMatter,
@@ -42,8 +44,10 @@ export const getBackupMarkdownContentWithoutMatter = async (
 
   const markdownBody = pipe(removeMatter, trim)(fileContent);
   const processedContent = await remark()
-    .use(remarkGfm)
-    .use(html)
+    .use(remarkGfm) // GitHub Flavored Markdown 지원
+    .use(remarkRehype) // 마크다운을 rehype로 변환
+    .use(rehypeHighlight) // 코드 하이라이팅
+    .use(rehypeStringify) // HTML로 변환
     .process(markdownBody);
 
   return {
