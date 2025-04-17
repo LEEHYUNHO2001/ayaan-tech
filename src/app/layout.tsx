@@ -24,8 +24,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`container relative bg-background pt-[72px] text-foreground ${notoSans.variable}`}
       >
-        <Header />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
