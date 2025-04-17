@@ -12,7 +12,7 @@ import {
   MarkdownFrontMatterModel,
   REGEX_FIRST_THREE_DASH_BLOCK,
 } from "@/helpers/backup-markdown-matter-helper";
-import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
+import { getBlogBackupDirectory } from "@/helpers/backup-markdown-list-helper";
 
 export interface MarkdownContentModel extends MarkdownFrontMatterModel {
   content: string;

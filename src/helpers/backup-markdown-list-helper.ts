@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { replace, map, pipe } from "ramda";
+import { map, pipe } from "ramda";
 import dayjs, { Dayjs } from "dayjs";
 import {
   extractFrontMatter,
@@ -8,8 +8,9 @@ import {
   MarkdownFrontMatterModel,
 } from "@/helpers/backup-markdown-matter-helper";
 import {
-  getBlogBackupDirectory,
+  getBlogDirectory,
   getBlogPostFullNameList,
+  removeMarkdownExtension,
 } from "@/helpers/markdown-common-helper";
 
 export interface BlogPostMeta extends MarkdownFrontMatterModel {
@@ -17,7 +18,8 @@ export interface BlogPostMeta extends MarkdownFrontMatterModel {
   dayjs: Dayjs;
 }
 
-const removeMarkdownExtension = replace(/\.md$/, "");
+export const getBlogBackupDirectory = () =>
+  getBlogDirectory(["src", "markdown", "backup"]);
 
 const getBlogPostMetaData = (fileFullName: string): BlogPostMeta => {
   const filePath = path.join(getBlogBackupDirectory(), fileFullName);
