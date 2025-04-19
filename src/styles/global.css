@@ -12,9 +12,9 @@
   --grey-light: #f8fafc;          /* 거의 흰색에 가까운 회색 */
   --secondary: #64748b;           /* slate 계열 (설명 텍스트 등) */
 
-  --sky: #38bdf8;                 /* sky-400 */
-  --sky-mid: #0ea5e9;             /* sky-500 */
-  --sky-light: #bae6fd;           /* sky-200 */
+  --sky-light: #e0f7ff;   /* 밝고 부드러운 하늘색 */
+  --sky: #a0e9ff;         /* 파스텔 하늘색 */
+  --sky-mid: #72d7f7;     /* 살짝 진한 파스텔 하늘색 */
 
   --yellow: #facc15;              /* yellow-400 */
   --yellow-mid: #fbbf24;          /* yellow-500 */
