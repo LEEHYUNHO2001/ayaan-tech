@@ -28,7 +28,7 @@ export default function BlogHomePage() {
       </h1>
       <ul className="flex flex-col gap-2.5">
         {transformedPostList.map((post: PostCardModel) => (
-          <li key={post.name} className="rounded-2xl bg-grey px-6 py-4">
+          <li key={post.name}>
             <PostCard post={post} />
           </li>
         ))}
