@@ -15,7 +15,7 @@ const Tag: FC<TagProps> = ({
 }): JSX.Element => {
   return (
     <div
-      className={`rounded-[100px] px-3 py-1 text-sm font-medium ${active ? "bg-grey" : "cursor-pointer"} ${bg}`}
+      className={`rounded-[100px] px-3 py-1 text-sm font-medium ${active ? "bg-primaryActive text-greyLight dark:bg-grey dark:text-foreground" : "cursor-pointer"} ${bg}`}
       onClick={onClick}
     >
       {label}
