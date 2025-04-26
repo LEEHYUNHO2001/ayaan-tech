@@ -22,7 +22,7 @@ export default function BlogHomePage() {
   }
 
   return (
-    <section className="py-5">
+    <section className="py-10">
       <h1 className="mb-10 border-b pb-5 text-4xl font-bold">
         {blogHomeTextModel.title}
       </h1>
