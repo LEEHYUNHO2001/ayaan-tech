@@ -1,9 +1,7 @@
-@import 'highlight.js/styles/night-owl.css';
-
 .blog-post {
     .blog-post__contents {
         h1, h2, h3, h4 {
-            @apply font-semibold mb-2 bg-primaryActive block px-2 py-1 rounded-lg w-fit;
+            @apply font-semibold mb-2 dark:bg-primaryActive block px-2 py-1 rounded-lg w-fit;
         }
 
         h1 {
@@ -27,12 +25,12 @@
         }
 
         p {
-            @apply leading-7 mb-5 text-greyLight;
+            @apply leading-7 mb-5 dark:text-greyLight;
 
         }
 
         strong {
-            @apply text-primaryLight font-semibold;
+            @apply text-black dark:text-primaryLight font-semibold;
         }
 
         ul, ol {
@@ -40,24 +38,26 @@
         }
 
         ul li, ol li {
-            @apply mb-2 list-disc text-greyLight;
+            @apply mb-2 list-disc dark:text-greyLight;
         }
 
         img {
             @apply my-5 rounded-lg h-auto max-w-full mx-auto;
         }
 
+        /* 백틱으로 감싼 code */
         code {
-            @apply bg-black py-1 px-2 rounded-md;
+            @apply dark:bg-black bg-primary py-1 px-2 rounded-md;
         }
 
+        /* 백틱 3개로 감싼 code */
         pre code {
-            @apply bg-black mt-3 mb-5;
+            @apply bg-grey dark:bg-black mt-3 mb-5 block text-foreground;
         }
 
         /* 블록 인용 스타일 */
         blockquote {
-            @apply bg-grey italic border-l-4 border-primaryActive mb-5 py-2 px-5;
+            @apply dark:bg-grey bg-white italic border-l-4 border-primaryActive mb-5 py-2 px-5;
         }
 
         blockquote p {
@@ -69,7 +69,7 @@
         }
 
         table {
-            @apply text-greyLight w-full border-collapse my-5;
+            @apply dark:text-greyLight w-full border-collapse my-5;
         }
 
         th,
@@ -82,11 +82,11 @@
         }
 
         thead {
-            @apply bg-[#2D2F39];
+            @apply dark:bg-[#2D2F39];
         }
 
         tbody tr:nth-child(even) {
-            @apply bg-[#393B46];
+            @apply dark:bg-[#393B46];
         }
     }
 }
