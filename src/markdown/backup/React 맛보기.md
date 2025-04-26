@@ -87,7 +87,7 @@ React에는 크게 **class**를 사용하는 방법과 **Hooks**를 사용하는
       'Like'
     );` 는 'button 태그를 만들건데 Like라는 버튼이고, 이 버튼은 클릭하면 **this.state.liked** 가 **true** 된다' 라는 의미다.
     
-undefined
+![](/images/a1e17bce-4ede-4788-bf7f-bb2eff671e6c-react%20bu.gif)
     
 결국 버튼 누르면 `You liked this.` 가 나타난다는 소리다.
 

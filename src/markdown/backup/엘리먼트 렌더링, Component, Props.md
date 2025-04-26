@@ -56,7 +56,7 @@ function tick() {
 setInterval(tick, 1000);
 ```
 
-  undefined
+  ![](/images/6a785e61-61bd-46e0-af49-1fcef2bf1420-tiome.gif)
 
   `setInterval(함수, 1000)` 으로 1초마다 ReactDOM.render를 호출하고 있는 모습이다.
 
@@ -66,7 +66,7 @@ setInterval(tick, 1000);
 
 React DOM은 해당 엘리먼트와 그 자식 엘리먼트를 이전의 엘리먼트와 비교하고 DOM을 원하는 상태로 만든다. 필요한 경우에만 DOM을 업데이트하는 특성을 가지고 있다.
 
-undefined
+![](/images/cc1a00e0-6478-41b2-8937-de79e5007bd5-dadfadf.gif)
 
 위의 코드가 1초마다 전체 UI를 다시 그리도록 설계되어 있지만 실제로는 내용이 변경되는 부분만 업데이트 되고있다.
 

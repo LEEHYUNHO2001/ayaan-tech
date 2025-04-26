@@ -201,4 +201,4 @@ git push origin main
 
 > 마무리
 
-여러번 반복하다보면 익숙해질 것 같은 작업이었다. amend, stash 등 더 많은 기능을 능숙하게 사용할 수 있도록 더 연습해야겠다undefinedundefined.
+여러번 반복하다보면 익숙해질 것 같은 작업이었다. amend, stash 등 더 많은 기능을 능숙하게 사용할 수 있도록 더 연습해야겠다![](/images/0a8232c4-4b48-49ab-854a-39acc889d035-source.jpg)![](/images/cb567574-1e77-4181-bf28-cda3e1fee8bc-source.jpg).

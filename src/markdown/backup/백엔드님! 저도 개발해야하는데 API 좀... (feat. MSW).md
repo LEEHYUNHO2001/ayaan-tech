@@ -12,7 +12,7 @@ FrontEnd 개발을 하다 보면, 데이터를 기반으로 UI를 그리는 경�
 
 <br>
 
-undefined
+![](/images/e1c6d0a8-4a3f-4e80-a92c-da6c90654e28-image.jpg)
 
 API가 미리 만들어져 있다면 우리는 API Endpoint에 요청을 찔러보며 개발을 시작하면 된다.
 
@@ -54,7 +54,7 @@ API가 없어도 UI를 미리 구현해 놓을 수 있어 프론트엔드의 개
 
 <br>
 
-undefined
+![](/images/7f5ac5e0-adcd-4ed2-98a8-3a67ffaf534e-image.jpg)
 
 상상해보자. 백엔드 개발자가 _"API를 아직 설계하지 못했어요 ㅠㅠ"_ 라며 미안함을 비출 때, _"괜찮아요. Mock Data로 UI는 이미 다 구현해놓았습니다!"_ 라고 안심시켜주면 뿌듯할 것이다! (~~사실 너무 당연한거라 안 뿌듯~~) 
 
@@ -71,7 +71,7 @@ undefined
 
 <br>
 
-undefined
+![](/images/3fdb107d-8e37-42fc-8aa8-56866c5b3e08-image.jpg)
 
 _"데이터 받아오는 것 쯤이야 API만들어지고 하지 뭐!"_ 라는 생각을 하기에는 비동기 통신에 생각해야 할 점들이 많다. 데이터를 받아오는 fetch 함수 구현, TanStarck Query를 사용하는 경우에는 Custom Hooks 설계, 채팅 입력했을 경우 나의 채팅도 대화 목록에 추가되도록 기능 연결... 3가지만 말했는데 벌써 디렉터리 구성부터 작성할 코드까지 산더미다.
 
@@ -119,7 +119,7 @@ MSW는 서비스 워커를 이용하여 API를 모킹하는 라이브러리다. 
 
 <br>
 
-undefined
+![](/images/61bd0b30-9c5d-47e0-9e91-b09debdcc81d-image.jpg)
 
 MSW의 장점과 여러가지 개념들을 살펴보니 동작하는 원리가 어렵게 느껴지지 않는다! "마지막으로 설명 하나만 더.." 하지 않고, 사용법으로 넘어가겠다.
 
@@ -276,7 +276,7 @@ msw는 REST API 뿐만 아니라 GraphQL도 지원한다. 우리가 처음에 �
 
 <br>
 
-undefined
+![](/images/4054d38e-7b78-40d1-9708-d9d51e92d142-image.jpg)
 
 
 이렇게 우리는 msw까지 사용해서 프론트엔드 개발 생산성을 늘렸다. url의 `https://example.com`만 나중에 배포된 백엔드의 Endpoint로 설정해준다면 모든 기능은 정상적으로 동작할 것이다..!!

@@ -4,7 +4,7 @@ description: "다크모드에 대해..(ContextAPI)"
 date: 2022-01-19T10:31:58.805Z
 tags: ["CSS","React","next","typescript","상태관리"]
 ---
-undefined
+![](/images/9457bfc9-785d-4025-8acb-c1c50b7599ee-dfgg.gif)
 
 ## Emotion 리팩토링
 
@@ -189,13 +189,13 @@ export const useDarkMode = () => {
 
 `toggleTheme`을 보자. toggleTheme는 클릭 될 때마다 라이트 모드 or 다크모드를 보여줄 것이다. 현재 theme는 라이트 모드고 토글을 클릭했다고 가정하자. `setMode(darkMode)`가 실행될 것이다. setMode로 가면 `setTheme(mode);`가 되어 theme는 darkMode가 될 것이다. 
 
-undefined
+![](/images/ddec6cce-f59b-4c9e-9de5-1fc7cbcf2181-hghghgh.gif)
 
 사실 이걸로 다크모드 구현은 끝났다. 그렇다면 로컬 스토리지는 왜 사용하고 useEffect는 왜 넣어준 것일까? 바로 모든 페이지에서 theme를 적용하기 위해서다.
 
 다크모드 상태라고 가정하자. 현재 `/` 경로인 Home에 있을 때, 상세 페이지로 가게되면 사용자는 다크모드가 유지되기를 원하지만 그렇게 동작하지 않는다. 페이지를 이동하면 다크모드를 눌렀었는지 기억하지 못하기 때문이다. 심지어 다크모드를 누르고 새로고침해도 다크모드는 해제된다.
 
-undefined
+![](/images/ac6af365-01c8-4fd5-81ca-11624ba8c913-ghgh.gif)
 
 다시 `setMode`를 보자. darkMode는 lightTheme가 아니므로, 로컬 스토리지에 theme라는 key와 dark라는 value로 데이터가 저장된다. 그리고 setTheme로 인해 theme는 darkTheme가 될 것이다.
 

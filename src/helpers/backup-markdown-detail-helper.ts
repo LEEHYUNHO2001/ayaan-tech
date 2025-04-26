@@ -1,7 +1,10 @@
 import path from "path";
 import fs from "fs";
 import { remark } from "remark";
-import html from "remark-html";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeHighlight from "rehype-highlight";
+import rehypeStringify from "rehype-stringify";
 import { pipe, replace, trim } from "ramda";
 import {
   extractFrontMatter,
@@ -9,7 +12,7 @@ import {
   MarkdownFrontMatterModel,
   REGEX_FIRST_THREE_DASH_BLOCK,
 } from "@/helpers/backup-markdown-matter-helper";
-import { getBlogBackupDirectory } from "@/helpers/markdown-common-helper";
+import { getBlogBackupDirectory } from "@/helpers/backup-markdown-list-helper";
 
 export interface MarkdownContentModel extends MarkdownFrontMatterModel {
   content: string;
@@ -40,7 +43,12 @@ export const getBackupMarkdownContentWithoutMatter = async (
   const frontMatterModel = getMarkdownFrontMatterModel(frontMatter);
 
   const markdownBody = pipe(removeMatter, trim)(fileContent);
-  const processedContent = await remark().use(html).process(markdownBody);
+  const processedContent = await remark()
+    .use(remarkGfm) // GitHub Flavored Markdown 지원
+    .use(remarkRehype) // 마크다운을 rehype로 변환
+    .use(rehypeHighlight) // 코드 하이라이팅
+    .use(rehypeStringify) // HTML로 변환
+    .process(markdownBody);
 
   return {
     ...frontMatterModel,

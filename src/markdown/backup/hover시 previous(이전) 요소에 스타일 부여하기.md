@@ -108,7 +108,7 @@ export const Component = () => {
 
 <br>
 
-undefined
+![](/images/8ef530cd-a0c5-48b5-9921-5b2159aa33b2-image.jpg)
 
 마지막으로 포인트는 **isHover**이다. 자신만의 index를 가진 Card 컴포넌트가 `hover`보다 작거나 같은지 비교한다. `isHover`가 `true`면 모두 호버된 것처럼 효과를 넣어주기 위해서이다. 예를 들어 두 번째 카드를 호버했다고 가정하자. `hover`은 `1`이 되고, `Card` 요소에서 `index`가 `1`보다 작거나 같은 첫 번째와 두 번째 카드의 `isHover`가 `true`가 되는 것이다.
 

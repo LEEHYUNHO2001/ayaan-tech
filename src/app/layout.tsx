@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
+import { ThemeProvider } from "@/providers/theme-provider";
+import Header from "@/components/Header/Header";
 import "@/styles/global.css";
 import "@/styles/markdown.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSans = Noto_Sans({
+  variable: "--font-noto-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"], // 필요 시 조정
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,15 +18,16 @@ export const metadata: Metadata = {
   description: "프론트엔드 기술 블로그",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body
+        className={`container relative bg-background pt-[72px] text-foreground ${notoSans.variable}`}
+      >
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

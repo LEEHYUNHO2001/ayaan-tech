@@ -48,11 +48,12 @@ npm i passport express-session cookie-parser
 > ## local 전략 사용
 현재 프로젝트는 Front Server과 Back Server가 따로 존재한다.
 
+
 ```js
 //app.js
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const passport = require('src/markdown/backup/passport');
+const passport = require('passport');
 
 const passportConfig = require('./passport');
 
@@ -60,9 +61,9 @@ passportConfig();
 
 app.use(cookieParser("12341234"));
 app.use(session({
-	saveUninitialized: false,
-	resave: false,
-	secret: "12341234",
+    saveUninitialized: false,
+    resave: false,
+    secret: "12341234",
 }));
 app.use(passport.initialize()); //초기화
 app.use(passport.session()); //세션에서 로그인정보 복구
@@ -73,33 +74,33 @@ Server의 app.js에 미들웨어들을 선언해준다. passport에 대한 작�
 
 ```js
 //passport/local.js
-const passport = require('src/markdown/backup/passport');
-const { Strategy: LocalStrategy } = require('passport-local');
-const { User } = require('../models');
+const passport = require('passport');
+const {Strategy : LocalStrategy} = require('passport-local');
+const {User} = require('../models');
 const bcrypt = require('bcrypt');
 
 module.exports = () => {
-	passport.use(new LocalStrategy({
-		usernameField: 'email',
-		passwordField: 'password',
-	}, async (email, password, done) => {
-		try {
-			const user = await User.findOne({
-				where: { email }
-			});
-			if (!user) {
-				return done(null, false, { reason: '존재하지 않는 사용자입니다.' });
-			}
-			const result = await bcrypt.compare(password, user.password);
-			if (result) {
-				return done(null, user);
-			}
-			return done(null, false, { reason: '비밀번호가 일치하지 않습니다.' })
-		} catch (error) {
-			console.error(error);
-			return done(error)
-		}
-	}));
+    passport.use(new LocalStrategy({
+        usernameField: 'email',
+        passwordField: 'password',
+    }, async (email, password, done) => {
+        try{
+            const user = await User.findOne({
+                where:{email}
+            });
+            if(!user){
+                return done(null, false, {reason : '존재하지 않는 사용자입니다.'});
+            }
+            const result = await bcrypt.compare(password, user.password);
+            if(result){
+                return done(null, user);
+            }
+            return done(null, false, {reason: '비밀번호가 일치하지 않습니다.'})
+        } catch(error){
+            console.error(error);
+            return done(error)
+        }
+    }));
 };
 ```
 전략을 사용하는 부분이다. 나중에 다른 전략을 사용하기위해 Strategy를 LocalStrategy의 변수명으로 사용하도록 했다. **Strategy의 첫번째 인자는 객체이고, 두번째 인자는 함수**이다. 
@@ -113,27 +114,27 @@ sequelize를 사용하고 있어 findOne함수를 사용했다. 입력받은 ema
 
 ```js
 //passport/index.js
-const passport = require('src/markdown/backup/passport');
+const passport = require('passport');
 
 const local = require('./local');
-const { User } = require('../models');
+const {User} = require('../models');
 
 module.exports = () => {
-	passport.serializeUser((user, done) => {
-		done(null, user.id);
-	});
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
 
-	passport.deserializeUser(async (id, done) => {
-		try {
-			const user = await User.findOne({ where: { id } });
-			done(null, user);
-		} catch (error) {
-			console.error(error);
-			done(error);
-		}
-	});
+    passport.deserializeUser(async (id, done) => {
+        try{
+            const user = await User.findOne({where:{id}});
+            done(null, user);
+        } catch(error){
+            console.error(error);
+            done(error);
+        }
+    });
 
-	local();
+    local();
 };
 ```
 전략을 설계한 local을 불러와준다. **serializeUser**는 Back server 메모리를 위해 사용자의 모든 정보가 아닌 user.id만 따로 저장한다. id를 통해 복원하기 위해서 **deserializeUser**는 id값으로 유저 찾아서 연결해준다. 이 값은 req.user에 들어가도록 되어있다.

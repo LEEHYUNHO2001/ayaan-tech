@@ -50,7 +50,7 @@ Nav 안에 있던 모달들은 이제 밖에서 사용할 수 있게 되었다. 
 
 다른 사람의 프로필에 들어갔을 때, 그 사용자가 판매하고 있는 상품의 목록들을 보여주는 부분을 구현하려고 한다.
 
-undefined
+![](/images/0c68d9c4-97af-4369-833a-048cd5605f57-hghghghgh.gif)
 
 결과물 먼저 보자. 버튼을 이용하여 사진을 움직이는것 처럼 보이게 Carousel로 설계해주었다.
 
@@ -135,7 +135,7 @@ const CarouselTitle = styled.p`
 
 하지만 한가지 문제점이 있다.
 
-undefined
+![](/images/8b3dd860-a943-40f9-ace6-2a988266b15a-fggfgfgfgfg.gif)
 
 캐러샐이 Nav 위에 위치 해버리는 문제점이다. 
 

@@ -64,7 +64,7 @@ newComment의 길이만큼 false로 채운 배열로 commentBtn을 초기화해�
 
 `commentBtn[i] === false` 인 경우에만 `1개의 답글` 버튼이 생성되도록 했고, 클릭되면 ComComForm  컨테이너가 나타날 것이다.
 
-undefined
+![](/images/717c1455-336f-41f8-b84d-4392a46afdf3-sdfsf.gif)
 
 이렇게 댓글과 대댓글 조회 부분을 완성했다.
 
@@ -145,7 +145,7 @@ undefined
 
 댓글 작성을 클릭했을때 실행되는 onSubmit 함수에 axios로 Strpai DB에 정보를 넣은 후, mutate하도록 했다.
 
-undefined
+![](/images/d65c78ef-ab5d-4c93-aa6d-673922231405-ggggggggg.gif)
 
 댓글을 작성하마자 UI에 나타나는것을 볼 수 있다.
 

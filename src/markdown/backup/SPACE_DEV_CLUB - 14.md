@@ -76,7 +76,7 @@ export const DeleteModel = ({ setIsDelete, comments }: Props) => {
 
 이제 모달창을 구현해보자. 취소를 누를 경우에 모달창을 닫아주고 스크롤이 다시 가능하게 만들었다. 확인을 클릭할 경우에는 axios로 delete 요청을 API 엔드포인드에 해당 댓글의 id값을 전달하여 보내고있다. 그 후에 스크롤이 가능하게 해주고, mutate로 실시간으로 댓글이 삭제된 UI를 보여준다.
 
-undefined
+![](/images/9bbea79b-d83a-45b8-a604-311faba9b523-jj.gif)
 
 라이트 모드에서 삭제를 누른 후 취소 한번 해주었다. 그리고 다크 모드로 변환하고 댓글 삭제를 수행했다. 댓글은 정상적으로 삭제되었지만 대댓글들은 삭제가 되지 않고 있다.
 
@@ -113,7 +113,7 @@ undefined
 
 그래서 코드를 수정해주었다. delete axios 요청을 하는 Delete 함수를 생성해주었고, 파라미터로 id값을 받는다. 대댓글일 경우에는 `Delete(comments.id);` 로 하나의 댓글만 삭제한다. 하지만 `depth`가 0이여서 댓글일 경우에는 `filter`로 모든 댓글에서 현재 삭제하는 댓글과 같은 그룹인 것을 찾는다. 그리고 필터된 배열을 `forEach`를 돌며 `Delete()` 함수를 실행시켜준다.
 
-undefined
+![](/images/6e44d454-42ca-42cd-b10f-3121966a7db9-lllll.gif)
 
 이제 댓글을 삭제하면 그에 달린 대댓글도 모두 삭제된다.
 
@@ -170,7 +170,7 @@ setCommentForm={setCommentForm}
 
 대댓글에서의 입력 폼에서는 group는 map돌리고 있는거의 index값인 i + 1 을 넘겨주면 된다. 현재 그룹에 있는 댓글에 대댓글을 추가하는 것이기 때문이다. order은 마지막 요소의 order보다 1증가시켜주면 된다.
 
-undefined
+![](/images/034b3281-fd0c-49ae-b772-156d3d45426b-lklk.gif)
 
 이제 댓글과 대댓글 Create 및 Delete가 정상적으로 동작한다.
 
@@ -279,7 +279,7 @@ setCommentForm에는 UpdateCommentForm.tsx 파일에서 setIsUpdate를 넘겨주
 
 onSubmit에 파라미터를 넘겨줘야 하므로 사용하던 모양도 살짝 변경되었다. 댓글 작성 버튼도 상황에 맞게 댓글 수정 버튼으로 UI가 수정되도록 구현했다.
 
-undefined
+![](/images/a07e7174-e85a-41bb-afa0-5811ead46bb2-ggggs.gif)
 
 <br>
 

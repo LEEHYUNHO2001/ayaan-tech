@@ -216,26 +216,26 @@ PC용 헤더인 Navigation에 대해서만 설명해 보겠다.
 //Navigation.tsx
 export const Navigation = () => {
   return (
-          <Container>
-            <Link href="/">
-              <a>
-                <H1>Futurama</H1>
-              </a>
-            </Link>
-            <nav>
-              <ItemContainer>
-                {ROUTES.map((routeObject: ROUTESDATA) => {
-                  return (
-                          <Item key={routeObject.ID}>
-                            <Link href={routeObject.PATH}>
-                              <a>{routeObject.LABEL}</a>
-                            </Link>
-                          </Item>
-                  );
-                })}
-              </ItemContainer>
-            </nav>
-          </Container>
+    <Container>
+      <Link href="/">
+        <a>
+          <H1>Futurama</H1>
+        </a>
+      </Link>
+      <nav>
+        <ItemContainer>
+          {ROUTES.map((routeObject: ROUTESDATA) => {
+            return (
+              <Item key={routeObject.ID}>
+                <Link href={routeObject.PATH}>
+                  <a>{routeObject.LABEL}</a>
+                </Link>
+              </Item>
+            );
+          })}
+        </ItemContainer>
+      </nav>
+    </Container>
   );
 };
 ```

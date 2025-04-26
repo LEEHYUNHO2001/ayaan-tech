@@ -51,7 +51,7 @@ export interface Wine {
 ```jsx
 import type { NextPage } from "next";
 import axios from "axios";
-import useSWR from "src/markdown/backup/SWR";
+import useSWR from "swr";
 import { Wine } from "../../types/wine";
 
 // 한번 불러오고 다시 불러오지 않아도 될 녀석들.. ssr 해보자..
@@ -142,7 +142,7 @@ export const WINE_API_ENDPOINT = "https://api.sampleapis.com/wines/";
 
 ```jsx
 //hooks/useWindData.ts
-import useSWR from "src/markdown/backup/SWR";
+import useSWR from "swr";
 import { fetcher } from "../utils/fetcher";
 import { WINE_API_ENDPOINT } from "../constants";
 

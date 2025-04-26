@@ -162,11 +162,9 @@ export const MEDIA_QUERY_END_POINT = {
 
 ```jsx
 import { Wine } from "../types/Wine";
-import styled from "src/markdown/backup/styled-components";
+import styled from "styled-components";
 
-interface
-WineProps
-{
+interface WineProps {
   wineData: Wine;
 }
 
@@ -256,7 +254,7 @@ index.ts는 layout 컴포넌트들을 파일을 export 해주는 파일이다.
 //Layout
 import React from "react";
 import { Navigation } from "./Navigation";
-import styled from "src/markdown/backup/styled-components";
+import styled from "styled-components";
 
 export const Layout: React.FC = ({ children }) => {
   return (

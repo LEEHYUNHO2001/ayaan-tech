@@ -58,7 +58,7 @@ Redux와 Mobx가 이미 있는데, Recoil을 사용하는 이유는 러닝 커�
 
 그리고 React 동시성 모드, Suspense 등을 지원하기 때문에 사용자 경험 관점에에서도 좋다.
 
-undefined
+![](/images/ccb193a1-726e-4b3f-8a8c-5f6fd9726b95-image.jpg)
 
 하지만 역시 단점도 존재하는데, redux dev tool와 같은 개발자 도구가 잘 되어있지 않고 커뮤니티가 적다는 것이다. 또한 모든 API들이 신뢰성이 높은것이 아니다. useGetRecoilValue, useRecoilRefresher 등은 공식문서도 UNSTABLE로 분류하고 있다.
 

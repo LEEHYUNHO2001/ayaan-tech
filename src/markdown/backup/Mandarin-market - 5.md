@@ -12,7 +12,7 @@ tags: ["React","next","typescript"]
 
 ### 이메일 체크
 
-undefined
+![](/images/38ccbce3-d270-4cc7-b84d-e23b36ef9551-h.gif)
 
 먼저 회원가입시 이메일을 입력했을 때, 이미 가입한 이메일인지 체크해야한다.
 

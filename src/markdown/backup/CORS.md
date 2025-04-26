@@ -17,7 +17,7 @@ Cross-Origin Resource Sharing
 
 **protocol에서 port까지**를 **origin**이라고 한다.
 
-undefined
+![](/images/707656c7-07ad-495c-8ef9-57bc953925a6-%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202021-08-23%20160520.jpg)
 
 브라우저 개발자 도구의 console창에 **locaton.origin**을 입력하면 origin 확인이 가능하다.
 
@@ -59,7 +59,7 @@ CORS의 동작 방식은 단순 요청(**simple request**), 예비 요청(**pref
 
 **OPTIONS** 메서드로 서버에 예비 요청을 먼저 보내고, 서버는 이 예비 요청에 대한 응답으로 Access-Control-Allow-Origin 헤더를 포함한 응답을 브라우저에 보낸다. 브라우저는 단순 요청과 동일하게 Access-Control-Allow-Origin 헤더를 확인해서 CORS 동작을 수행할지 판단한다.
 
-undefined
+![](/images/1bcfc85e-4556-47fe-80fa-9483a59b4f04-%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202021-08-23%20172931.jpg)
 
 GET, POST, PUT, DELETE 등의 메서드로 API를 요청했는데, 크롬 개발자도구의 Network 탭에 OPTIONS 메서드로 요청이 보내어진 경험이 있다. 이것이 CORS이다.
 
@@ -106,7 +106,7 @@ preflight request에 대한 응답으로 실제 요청시 사용할 수 있는 H
 
 > ## CORS 해결
 
-undefined
+![](/images/c34c1a42-cc89-4ead-a590-d443653b6a38-%ED%99%94%EB%A9%B4%20%EC%BA%A1%EC%B2%98%202021-08-23%20150441.jpg)
 
 현재 React 프로젝트 Client, Front(Next), Back(Express), DB(MySQL)가 위와같이 구성되어있다. 회원가입 기능을 구현하는 도중에 CORS 에러가 나타났다.
 

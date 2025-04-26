@@ -34,13 +34,13 @@ npm i redux react-redux
 
 > ## 개념과 사용법
 
-undefined원하는 부분에서 action을 보내면, reducer가 data state값을 리턴한다.
+![](/images/66174b7a-2cb9-4fbc-8bf9-209f9b255134-a.jpg)원하는 부분에서 action을 보내면, reducer가 data state값을 리턴한다.
 
 ```js
 //store 정의
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'src/markdown/backup/Redux';
+import {createStore} from 'redux';
 import { Provider } from 'react-redux';
 
 import App from './App';
@@ -50,7 +50,7 @@ const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+  	<App />
   </Provider>,
   document.getElementById('root')
 );

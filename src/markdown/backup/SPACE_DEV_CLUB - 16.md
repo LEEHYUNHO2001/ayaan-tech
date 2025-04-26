@@ -83,7 +83,7 @@ SeriesBoxPost와 currentPost를 비효율적으로 선언하던 것을 위와 �
 
 그리고 캐러셀 컴포넌트에서 useEffect를 사용하여 currentPost가 변경되었을 경우 caroucelIndex값을 다시 할당해주었다.
 
-undefined
+![](/images/60ad835c-8365-4f6c-994f-0c68da999edb-ghghghg.gif)
 
 글을 넘어갈 때, 캐러샐도 잘 움직이는 것을 볼 수 있다.
 

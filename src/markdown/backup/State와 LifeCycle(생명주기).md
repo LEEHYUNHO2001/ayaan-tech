@@ -21,7 +21,7 @@ function tick() {
 setInterval(tick, 1000);
 ```
 
-undefined
+![](/images/b25af3a7-e085-44b3-9183-4000b0fd80c0-%EC%8B%9C%EA%B0%84.gif)
 
 이전 글에서 tick 함수에 JSX 문법으로 엘리먼트를 생성했었다. 그리고 여기서 ReactDom.render 해주었다.
 
@@ -210,7 +210,7 @@ ReactDOM.render(
 );
 ```
 
-undefined
+![](/images/ecfd3459-9250-40dd-8aa4-0b655f788777-%EC%B5%9C%EC%A0%81x.gif)
 
 이제 실행해보면 시계가 동작한다.
 
@@ -231,7 +231,7 @@ ReactDOM.render(
 );
 ```
 
-undefined
+![](/images/c7c8b1b6-1fbe-40ca-84c8-8fe0c5035b4f-%EB%82%98%EB%88%84%EA%B8%B0.gif)
 
 Clock Component에 있던 h1태그를 빼주었다. 이제 시간이 바뀔 때, 해당 부분만 렌더링되는것을 볼 수 있다.
 

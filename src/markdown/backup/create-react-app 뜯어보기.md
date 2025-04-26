@@ -53,7 +53,7 @@ tags: ["React"]
 
 이제 여기에는 component, pages 등 원하는 디렉터리를 만들고 본인 스타일에 맞게 코드를 설계하면 된다.
 
-undefined
+![](/images/b50294ce-f07b-43e9-a9b1-0a0df996cdfe-df.gif)
 
 * **App.js, App.css, App.test.js(테스트)**로 위의 기본 UI 생성하고 있다.
 

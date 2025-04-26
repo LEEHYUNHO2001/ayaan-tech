@@ -54,7 +54,7 @@ ReactDOM.render(
 );
 ```
 
-undefined
+![](/images/09d8f334-0168-49d3-8674-481c087c1be3-sdfh.gif)
 
 모든 키 입력에서 `handleChange`가 동작하여 value값을 받는다. 받은 value의 값(this.state.value)은 input의 value에 props로 주고 있다. Submit을 클릭하면 `handleSubmit` 가 동작하여 입력했던 value 값으로 alert가 나타나는 것이다. 이렇게 **React에 의해 값이 제어되는 입력 Form 요소** 를 제어 컴포넌트라고 한다.
 
@@ -105,7 +105,7 @@ class FlavorForm extends React.Component {
 }
 ```
 
-undefined
+![](/images/608944d9-4790-44fd-bd1e-c90ff50cec76-dfg.gif)
 
 select 박스도 input 예시와 비슷하게 동작한다. select 태그에 multiple 은 value에 배열을 전달할 수 있다.
 
@@ -113,7 +113,7 @@ select 박스도 input 예시와 비슷하게 동작한다. select 태그에 mul
 
 여러 input 요소를 제어해야할 경우, name 속성을 추가하고 event.target.name 값을 통해 핸들러가 어떤 작업을 할 지 선택할 수 있게 해준다.
 
-undefined
+![](/images/8ba4caaa-ef20-423e-98a6-a84d58268a6d-shas.gif)
 
 `target.type`으로 삼항 연산자를 통해 checkbox input인지 value를 사용하는 input인지 판단한다. 그리고 name을 가져오고 value값을 넣어준다. 다중 입력 제어가 가능해진 것이다.
 

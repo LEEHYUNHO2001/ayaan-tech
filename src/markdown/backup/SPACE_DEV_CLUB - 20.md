@@ -156,7 +156,7 @@ ex ) write/오늘뭐먹지?  ->  오늘뭐먹지? 라는 페이지의 수정 페
 
 마지막으로 `handleSubmit` 하는 곳에서 DetailData 유무에 따라 게시글 작성 혹은 게시글 수정을 수행하도록 했다.
 
-undefined
+![](/images/96c7d037-59ae-4520-8d93-3294c04421e6-ggggg.gif)
 
 <br>
 
@@ -230,7 +230,7 @@ DetailData이 없을 경우 로딩중이라는 글자만 UI에 출력하고 있�
 
 ### 동작
 
-undefined
+![](/images/392198cf-2519-4e5b-9018-cdbac0c1a175-jjj.gif)
 
 로딩이 진행중이라는 듯이 구조가 잡힌 UI가 흐려졌다 진해졌다를 반복한다.
 

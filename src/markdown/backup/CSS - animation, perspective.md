@@ -70,7 +70,7 @@ none | forwards | backwards | both
 
 > 스타벅스 빌딩
 
-undefined
+![](/images/1ef03d30-49ae-4c73-b5e6-cbd8e0593670-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4.gif)
 
 현재 위의 사진에서는 완성된 스타벅스 빌딩이 보인다. Animation을 이용하여 이 건물이 점점 쌓여서 완성되는 모습을 표현할 수 있다.
 
@@ -117,11 +117,11 @@ animation을 keyframes으로 생성해주고, name-job-list에서 infinite하게
 
 name-job에서 `overflow: hidden;` 옵션을 준다.
 
-undefined
+![](/images/92192a0f-ed53-4297-a4f1-00a6ec338a3a-%EA%B9%80%EC%B9%98.gif)
 
 hidden 속성을 부여하지 않으면, 위와 같이 동작한다.
 
-undefined
+![](/images/4d77629c-b279-48e2-a42f-4a2ee2188afc-%EA%B8%80%EC%9E%90%EC%8A%AC.gif)
 
 전체 코드는 [GitHub](https://github.com/LEEHYUNHO2001/likelion/blob/master/html_study/082_%EA%B8%80%EC%9E%90%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C.html)를 참고하자.
 
@@ -299,7 +299,7 @@ item은 absolute가 되면서 카드의 앞면과 뒷면이 합쳐졌다. `backf
 
 <br>
 
-undefined
+![](/images/b907c96f-49c6-40cd-9890-4a93ed0b19fa-%EC%B9%B4%EB%93%9C.gif)
 
 hover 조건을 충족하면 한바퀴 반 돌면서 앞면을 보여주게 되고, 크기가 커진다.
 

@@ -4,7 +4,7 @@ description: "사용자 정의 이벤트를 생성하고 사용해보자."
 date: 2022-01-02T02:41:46.372Z
 tags: ["JavaScript"]
 ---
-undefined
+![](/images/01a7c66e-8bcf-452a-bbf0-b8c7fc9630a1-cus.gif)
 
 사용자 정의 이벤트를 생성할 수 있다. 평소에 클릭 이벤트시 특정 동작을 해주기 위해 `addEventListener` 을 사용하여 'click' 을 인자로 사용하는데 이와 같은 것을 직접 만들 수 있다.
 
@@ -123,7 +123,7 @@ hey라는 Custom Event가 사용되었다.
 
 close를 가진 span을 클릭시 Custom Event를 생성하여 `closeEvt`에 넣고, `dispatchEvent` 으로 사용한 뒤 `remove()` 해준다.
 
-undefined
+![](/images/01a7c66e-8bcf-452a-bbf0-b8c7fc9630a1-cus.gif)
 
 주문하기를 누루면 title과 message에 맞는 "에러"와 "로그인을 해주세요"가 나타나고 있다. 그리고 x 표시가 나타나는데, 이것이 class가 close인 span이다. 이 부분을 클릭하면 close 이벤트가 발생하여 console이 찍히고, remove될 것이다.
 

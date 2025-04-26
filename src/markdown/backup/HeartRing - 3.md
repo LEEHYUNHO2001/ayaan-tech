@@ -114,7 +114,7 @@ Logined.map((data) => {
 
 ### 캐러샐
 
-undefined
+![](/images/3179fef0-057d-4bd7-ae38-e1028152e4b0-gdfg.gif)
 
 Home에 캐러샐을 넣었다. [캐러샐 심화](https://velog.io/@leehyunho2001/Carousel-%EC%8B%AC%ED%99%94) 에서 잘 설명되어 있다. (무한 캐러샐, 자동 넘기기, 드래그 넘기기)
 

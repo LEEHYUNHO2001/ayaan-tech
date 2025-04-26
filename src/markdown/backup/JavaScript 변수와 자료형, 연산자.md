@@ -22,7 +22,7 @@ tags: ["JavaScript"]
     <p id="demoTwo"></p>
 ```
 
-undefined
+![](/images/51f59b01-2412-468e-b5f3-53244cd6dd9f-js%20s.gif)
 
 어떤 동작들이 가능한지 먼저 맛보기로 사용해보자.
 

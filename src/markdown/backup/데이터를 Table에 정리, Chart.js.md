@@ -149,7 +149,7 @@ function sortTable(key) {
 
 `sortTable`함수에서는 data에서 age들을 찾아 오름차순 또는 내림차순 정렬을 수행한 후 `renderTable(data)`를 한다. (age는 예시이고, 모든 th에 대해 위 과정이 동작됨)
 
-undefined
+![](/images/b227a1a4-1c4c-44f2-a5dd-fba8076d478f-dsds.gif)
 
 데이터 호출 버튼을 누르고, age 2번 클릭, eyeColor 2번 클릭 해보았다. 정상적으로 동작하는것을 볼 수 있다.
 ~~위 과정을 코드로 돌리면 Table모양이 조금 다를수있다. 필자는 부트스트랩을 넣어서..~~
@@ -259,6 +259,6 @@ function averageAge(data) {
 
 위에서 `</table>`뒤에 차트를 넣기위해 div안에 canvas로 공간을 줬었다. getElementById로 그 위치를 찾고, `getContext('2d')`로 2d차트를 그려줄 준비를 하자.
 
-undefined
+![](/images/5b998cd3-7a24-4171-bf37-257aa72a1794-%EC%B0%A8%ED%8A%B8.gif)
 
 이제 new Chart으로 그려주면된다. 위의 코드를 보면 대충 무슨소린지 알아볼 수 있을것이다. 차트를 매우 쉽게 그릴수 있게 되었다. 더 사용하고 싶은 옵션이 있다면, [공식 사이트](https://www.chartjs.org/)에서 사용법과 깃허브 주소들이 잘 나와있으므로 참고하자.

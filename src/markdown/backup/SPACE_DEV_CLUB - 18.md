@@ -33,7 +33,7 @@ yarn add @types/react-copy-to-clipboard
 
 CopyToClipboard로 감싸주며 text에 복사될 텍스트를 넣어주면 된다. 원하는 동작은 버튼을 클릭했을 경우 현재 페이지의 URL이 클립보드에 복사되는것이므로 `window.location.href` 값을 넣어주었다. 그리고 한번 더 감싸주는 `div`의 `onClick` 에 공유하기 버튼을 닫도록 state를 관리하고 alert 로 URL이 복사되었음을 알린다.
 
-undefined
+![](/images/208555d1-6a3a-48ef-ace3-344a8f775684-ss.gif)
 
 현재 URL이 클립보드에 잘 복사되는것을 볼 수 있다.
 
@@ -51,11 +51,11 @@ undefined
 
 페이스북 아이콘을 감싸는 `div`에 `onClcik` 이벤트로 `onClickFacebook` 을 주었다. 그 후에 페이스북 공유하기 기능을 이용하기 위해 페이스북에서 요구하는 URL로 리다이렉트 하면 된다.
 
-undefined
+![](/images/9b1026e2-7795-48ec-8002-4723fd709d91-hh.gif)
 
 페이스북 공유하기 기능을 이용하기 위해 아이콘을 클릭했다. 뭔가 오류가 나타났는데 localhost 주소여서 그런것 같다. 배포한 후에 실제 존재하는 웹 사이트가 되었을 때는 오류가 나타나지 않을 것이다.
 
-undefined
+![](/images/ee53ee7b-f170-44e3-8efd-5d47408c9de9-hjhj.gif)
 
 `${shareUrl}` 부분에 velog 주소를 넣으면 벨로그는 정상적으로 공유가 되기 때문이다.
 

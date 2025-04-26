@@ -107,7 +107,7 @@ export const Card = ({ arr }: Props) => {
 
 이제 props로 받아온 arr을 이용하여 UI를 설계해주면 완성이다.
 
-undefined
+![](/images/e9e389d5-e3bc-4c91-b858-9e7c2a2b56b8-%E3%85%8E.gif)
 
 검색에 맞게 유저들이 정상적으로 출력되고 있다.
 
@@ -218,6 +218,6 @@ const Like = styled.button<Hearted>`
 그리고 onClick 에서 if문의 조건을 state를 이용하여 넣어주었고, 클릭하면 hearted가 반전된다. 또한, 상황에 맞게 카운트도 증가 및 감소한다.
 
 
-undefined
+![](/images/2212b1c3-b5ae-4135-b231-41f74f448f22-ggg.gif)
 
 이제 실시간으로 하트의 색이 변하고, 카운트도 변동된다. API가 잘 짜여져 있다 보니 기능을 구현하는것이 수월하다. 슬슬 이 프로젝트도 마무리가 되어간다..

@@ -1,20 +1,19 @@
 import type { Config } from "tailwindcss";
-// import daisyui from "daisyui";
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       screens: {
         sm: "640px",
         md: "768px",
-        lg: "992px",
-        xl: "1200px", // ✅ `1280px` → `1200px` 변경
-        "2xl": "1200px", // ✅ 1536px 이상도 1200px 고정
+        lg: "900px",
+        xl: "900px", // ✅ `1280px` → `900px` 변경
+        "2xl": "900px", // ✅ 1536px 이상도 900px 고정
       },
       container: {
         center: true,
@@ -22,25 +21,38 @@ export default {
         screens: {
           sm: "640px",
           md: "768px",
-          lg: "992px", // Tablet. 1024px -> 992px.
-          xl: "1200px", // Desktop. 1280px -> 1200px.
-          "2xl": "1200px", // 1536px 이상도 1200px 고정.
+          lg: "900px", // Tablet. 1024px -> 900px.
+          xl: "900px", // Desktop. 1280px -> 900px.
+          "2xl": "900px", // 1536px 이상도 900px 고정.
         },
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        black: "var(--black)",
+        grey: "var(--grey)",
+        greyDark: "var(--grey-dark)",
+        greyLight: "var(--grey-light)",
+        secondary: "var(--secondary)",
+        primary: "var(--primary)",
+        primaryActive: "var(--primary-active)",
+        primaryLight: "var(--primary-light)",
+        sky: "var(--sky)",
+        skyMid: "var(--sky-mid)",
+        skyLight: "var(--sky-light)",
+        yellow: "var(--yellow)",
+        yellowMid: "var(--yellow-mid)",
+        yellowLight: "var(--yellow-light)",
+        green: "var(--green)",
+        greenMid: "var(--green-mid)",
+        greenLight: "var(--green-light)",
+        purple: "var(--purple)",
+        purpleLight: "var(--purple-light)",
       },
-      fontFamily: {
-        main: ["Pretendard", "Roboto", "Noto Sans KR", "sans-serif"],
-        other: ["Roboto", "Noto Sans KR", "sans-serif"],
-      },
-      // 새로운 폰트 사이즈 추가
-      fontSize: {
-        "2rem": "2rem",
-        "2.5rem": "2.5rem",
-      },
+      // fontFamily: {
+      //   main: ["Pretendard", "Roboto", "Noto Sans KR", "sans-serif"],
+      //   other: ["Roboto", "Noto Sans KR", "sans-serif"],
+      // },
     },
   },
-  // plugins: [daisyui],
 } satisfies Config;
