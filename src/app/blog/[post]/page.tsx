@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JSX } from "react";
 import { notFound } from "next/navigation";
 import { getBackupMarkdownContentWithoutMatter } from "@/helpers/backup-markdown-detail-helper";
+import PostDetail from "@/components/PostDetail/PostDetail";
 
 type BlogPostPageProps = {
   params: Promise<{ post: string }>;
@@ -38,12 +39,7 @@ export default async function BlogPostPage({
   return (
     <article className="py-10">
       <h1 className="mb-10 border-b pb-5 text-4xl font-bold">{decodedPost}</h1>
-      <div
-        className="blog-post__contents"
-        dangerouslySetInnerHTML={{
-          __html: content,
-        }}
-      />
+      <PostDetail content={content} />
     </article>
   );
 }
