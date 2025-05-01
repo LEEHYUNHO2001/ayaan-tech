@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, JSX, useState } from "react";
+import { FC, JSX, useMemo, useState } from "react";
 import { Career } from "@/app/careers/careers.type";
 
 const CareerCard: FC<Career> = ({
@@ -8,6 +8,8 @@ const CareerCard: FC<Career> = ({
   mainRole,
   period,
   description,
+  experienceList,
+  serviceList,
 }): JSX.Element => {
   const [isBack, setIsBack] = useState(false);
 
@@ -15,9 +17,11 @@ const CareerCard: FC<Career> = ({
     setIsBack((prev) => !prev);
   };
 
+  const showServiceList = useMemo(() => serviceList.length > 0, [serviceList]);
+
   return (
     <li
-      className="w-[52%] cursor-pointer [perspective:1000px]"
+      className="w-[52%] cursor-pointer [perspective:1000px] hover:shadow-greenLight"
       onClick={handleOnClickCareerCard}
     >
       <div
@@ -43,9 +47,25 @@ const CareerCard: FC<Career> = ({
         </div>
 
         {/* 뒷면 */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center rounded-sm p-8 text-center will-change-transform [backface-visibility:hidden] [transform:rotateX(180deg)]">
-          <h3 className="mb-2 text-lg font-bold">추가 설명 Title</h3>
-          <p className="text-sm">추가 설명 Contents</p>
+        <div className="absolute inset-0 flex gap-10 rounded-sm p-8 will-change-transform [backface-visibility:hidden] [transform:rotateX(180deg)]">
+          <div className="flex flex-col">
+            <h3 className="mb-2 font-bold">Experience</h3>
+            <ul className="flex list-disc flex-col gap-1 pl-4 text-xs">
+              {experienceList.map((experience) => (
+                <li key={experience}>{experience}</li>
+              ))}
+            </ul>
+          </div>
+          {showServiceList && (
+            <div className="flex flex-col">
+              <h3 className="mb-2 font-bold">Service</h3>
+              <ul className="flex list-disc flex-col gap-1 pl-4 text-xs">
+                {serviceList.map((service) => (
+                  <li key={service}>{service}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </li>
