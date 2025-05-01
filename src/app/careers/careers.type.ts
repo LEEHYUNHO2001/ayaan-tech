@@ -8,6 +8,8 @@ export interface Career extends Education {
   mainRole: string;
   subRole?: string;
   stackList: string[];
+  experienceList: string[];
+  serviceList: string[];
 }
 
 export interface CareersHomeTextModel {
