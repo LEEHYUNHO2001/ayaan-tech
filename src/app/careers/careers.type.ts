@@ -1,4 +1,4 @@
-interface Education {
+export interface Education {
   label: string;
   description: string;
   period: string[];
@@ -14,6 +14,7 @@ export interface Career extends Education {
 
 export interface CareersHomeTextModel {
   title: string;
+  subTitle: string;
   careerList: Career[];
   educationList: Education[];
 }
