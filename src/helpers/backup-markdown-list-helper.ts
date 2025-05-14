@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { map, pipe } from "ramda";
+import { map, pipe, filter } from "ramda";
 import dayjs, { Dayjs } from "dayjs";
 import {
   extractFrontMatter,
@@ -60,3 +60,17 @@ export function transformPostList(postList: BlogPostMeta[]): PostCardModel[] {
     tagList: item.tagList,
   }));
 }
+
+const isIncludedIn = (list: string[]) => (item: string) => list.includes(item);
+const filterByNameList = (nameList: string[]) => filter(isIncludedIn(nameList));
+
+export const getBlogBackupSpecificPostList = (
+  specificFileNameList: string[]
+): BlogPostMeta[] =>
+  pipe(
+    getBlogBackupDirectory,
+    getBlogPostFullNameList,
+    filterByNameList(specificFileNameList),
+    map(getBlogPostMetaData),
+    sortPostsByDate
+  )();
