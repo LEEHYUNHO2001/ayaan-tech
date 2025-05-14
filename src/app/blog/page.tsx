@@ -1,6 +1,7 @@
 import {
   BlogPostMeta,
   getBlogBackupPostList,
+  transformPostList,
 } from "@/helpers/backup-markdown-list-helper";
 import PostCard from "@/components/PostCard/PostCard";
 import { PostCardModel } from "@/components/PostCard/postCard.type";
@@ -11,15 +12,6 @@ export default function BlogHomePage() {
   const blogHomeTextModel = {
     title: "블로그 목록",
   };
-
-  function transformPostList(postList: BlogPostMeta[]): PostCardModel[] {
-    return postList.map((item) => ({
-      name: item.name,
-      description: item.description,
-      date: item.dayjs.format("YYYY-MM-DD"),
-      tagList: item.tagList,
-    }));
-  }
 
   return (
     <section className="py-10">
