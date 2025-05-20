@@ -24,7 +24,7 @@ const PostCard: FC<PostCardProps> = ({
 
   return (
     <div
-      className="dark: flex cursor-pointer items-start justify-between rounded-2xl border border-primary bg-primaryLight px-6 py-4 dark:border-greyLight dark:bg-grey"
+      className="flex cursor-pointer items-start justify-between rounded-2xl border border-primary bg-primaryLight px-6 py-4 transition-opacity duration-200 hover:opacity-70 dark:border-greyLight dark:bg-grey"
       onClick={handleOnClickPost}
     >
       <div className={`flex flex-col gap-2 ${hideDate ? "w-full" : "w-3/4"}`}>
