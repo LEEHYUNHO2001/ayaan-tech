@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { map, pipe } from "ramda";
+import { map, pipe, filter } from "ramda";
 import dayjs, { Dayjs } from "dayjs";
 import {
   extractFrontMatter,
@@ -12,6 +12,7 @@ import {
   getBlogPostFullNameList,
   removeMarkdownExtension,
 } from "@/helpers/markdown-common-helper";
+import { PostCardModel } from "@/components/PostCard/postCard.type";
 
 export interface BlogPostMeta extends MarkdownFrontMatterModel {
   name: string;
@@ -47,6 +48,29 @@ export const getBlogBackupPostList = (): BlogPostMeta[] =>
   pipe(
     getBlogBackupDirectory,
     getBlogPostFullNameList,
+    map(getBlogPostMetaData),
+    sortPostsByDate
+  )();
+
+export function transformPostList(postList: BlogPostMeta[]): PostCardModel[] {
+  return postList.map((item: BlogPostMeta) => ({
+    name: item.name,
+    description: item.description,
+    date: item.dayjs.format("YYYY-MM-DD"),
+    tagList: item.tagList,
+  }));
+}
+
+const isIncludedIn = (list: string[]) => (item: string) => list.includes(item);
+const filterByNameList = (nameList: string[]) => filter(isIncludedIn(nameList));
+
+export const getBlogBackupSpecificPostList = (
+  specificFileNameList: string[]
+): BlogPostMeta[] =>
+  pipe(
+    getBlogBackupDirectory,
+    getBlogPostFullNameList,
+    filterByNameList(specificFileNameList),
     map(getBlogPostMetaData),
     sortPostsByDate
   )();

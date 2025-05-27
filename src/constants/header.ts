@@ -4,7 +4,7 @@ export interface HeaderMenu {
 }
 
 export const HEADER_MENU_LIST: HeaderMenu[] = [
-  { label: "Intro", path: "/intro" },
+  { label: "Home", path: "/" },
   { label: "Blog", path: "/blog" },
   { label: "Careers", path: "/careers" },
 ];
