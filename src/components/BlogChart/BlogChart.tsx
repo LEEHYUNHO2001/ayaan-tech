@@ -9,7 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { useThemeContext } from "@/providers/theme-provider";
+import { useThemeContext } from "@/hooks/use-theme-context";
 
 interface BlogChartProps {
   postDateList: string[]; // YYYY-MM 형태로 전달된다고 가정
