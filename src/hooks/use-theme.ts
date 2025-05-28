@@ -10,7 +10,7 @@ import {
   ThemeType,
 } from "@/helpers/theme-helper";
 
-interface UseThemeModel {
+export interface UseThemeModel {
   theme: ThemeType;
   toggleTheme: () => void;
 }

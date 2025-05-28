@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { ThemeContext } from "@/providers/theme-provider";
+import { ThemeContextType } from "@/providers/theme-provider";
+import { ThemeContext } from "@/providers/theme-create-context";
 
-export function useThemeContext() {
-  const context = useContext(ThemeContext);
+export function useThemeContext(): ThemeContextType {
+  const context: ThemeContextType | null = useContext(ThemeContext);
   if (!context) throw new Error("ThemeProvider Error");
   return context;
 }

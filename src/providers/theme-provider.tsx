@@ -1,18 +1,21 @@
 "use client";
 
-import { createContext, ReactNode } from "react";
-import { useTheme } from "@/hooks/use-theme";
+import { JSX, ReactNode } from "react";
+import { useTheme, UseThemeModel } from "@/hooks/use-theme";
 import { ThemeType } from "@/helpers/theme-helper";
+import { ThemeContext } from "@/providers/theme-create-context";
 
-type ThemeContextType = {
+export type ThemeContextType = {
   theme: ThemeType;
   toggleTheme: () => void;
 };
 
-export const ThemeContext = createContext<ThemeContextType | null>(null);
-
-export function ThemeProvider({ children }: { children: ReactNode }) {
-  const theme = useTheme();
+export function ThemeProvider({
+  children,
+}: {
+  children: ReactNode;
+}): JSX.Element {
+  const theme: UseThemeModel = useTheme();
 
   return (
     <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>
