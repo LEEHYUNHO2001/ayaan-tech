@@ -9,12 +9,16 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { useThemeContext } from "@/providers/theme-provider";
 
 interface BlogChartProps {
   postDateList: string[]; // YYYY-MM 형태로 전달된다고 가정
 }
 
 export default function BlogChart({ postDateList }: BlogChartProps) {
+  const { theme } = useThemeContext();
+  const isDark = theme === "dark";
+
   const getCumulativeMonthlyPostCounts = (postDateList: string[]) => {
     const countMap = new Map<string, number>();
 
@@ -47,7 +51,7 @@ export default function BlogChart({ postDateList }: BlogChartProps) {
         <Line
           type="monotone"
           dataKey="count"
-          stroke="#8884d8"
+          stroke={isDark ? "#999" : "#777"}
           strokeWidth={2}
         />
       </LineChart>
