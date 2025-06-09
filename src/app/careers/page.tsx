@@ -104,22 +104,22 @@ export default function CareersHomePage() {
         <FlipHintArrow className="absolute right-20 top-4 animate-bounce" />
       </article>
 
-      <article className="pt-20">
-        <h2 className="mb-10 border-b pb-5 text-center text-3xl font-bold">
-          {careersHomeTextModel.subTitle}
-        </h2>
+      {/*<article className="pt-20">*/}
+      {/*  <h2 className="mb-10 border-b pb-5 text-center text-3xl font-bold">*/}
+      {/*    {careersHomeTextModel.subTitle}*/}
+      {/*  </h2>*/}
 
-        <ul className="flex justify-center gap-10">
-          {careersHomeTextModel.educationList.map((education) => (
-            <EducationCard
-              key={education.label}
-              label={education.label}
-              description={education.description}
-              period={education.period}
-            />
-          ))}
-        </ul>
-      </article>
+      {/*  <ul className="flex justify-center gap-10">*/}
+      {/*    {careersHomeTextModel.educationList.map((education) => (*/}
+      {/*      <EducationCard*/}
+      {/*        key={education.label}*/}
+      {/*        label={education.label}*/}
+      {/*        description={education.description}*/}
+      {/*        period={education.period}*/}
+      {/*      />*/}
+      {/*    ))}*/}
+      {/*  </ul>*/}
+      {/*</article>*/}
     </section>
   );
 }
