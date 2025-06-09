@@ -3,12 +3,13 @@ import {
   getBlogBackupPostList,
   transformPostList,
 } from "@/helpers/backup-markdown-list-helper";
-import PostCard from "@/components/PostCard/PostCard";
 import { PostCardModel } from "@/components/PostCard/postCard.type";
+import PostList from "@/components/PostList/PostList";
 
 export default function BlogHomePage() {
   const blogBackupPostList: BlogPostMeta[] = getBlogBackupPostList();
-  const transformedPostList = transformPostList(blogBackupPostList);
+  const transformedPostList: PostCardModel[] =
+    transformPostList(blogBackupPostList);
   const blogHomeTextModel = {
     title: "블로그 목록",
   };
@@ -18,13 +19,8 @@ export default function BlogHomePage() {
       <h1 className="mb-10 border-b pb-5 text-4xl font-bold">
         {blogHomeTextModel.title}
       </h1>
-      <ul className="flex flex-col gap-2.5">
-        {transformedPostList.map((post: PostCardModel) => (
-          <li key={post.name}>
-            <PostCard post={post} />
-          </li>
-        ))}
-      </ul>
+
+      <PostList postList={transformedPostList} />
     </section>
   );
 }
