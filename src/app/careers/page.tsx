@@ -1,6 +1,5 @@
 import { CareersHomeTextModel } from "@/app/careers/careers.type";
 import CareerCard from "@/components/CareerCard/CareerCard";
-import EducationCard from "@/components/EducationCard/EducationCard";
 import FlipHintArrow from "@/components/FlipHintArrow/FlipHintArrow";
 
 export default function CareersHomePage() {
