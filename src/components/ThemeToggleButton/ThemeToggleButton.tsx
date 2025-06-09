@@ -1,6 +1,6 @@
 "use client";
 
-import { useThemeContext } from "@/providers/theme-provider";
+import { useThemeContext } from "@/hooks/use-theme-context";
 
 export default function ThemeToggleButton() {
   const { theme, toggleTheme } = useThemeContext();

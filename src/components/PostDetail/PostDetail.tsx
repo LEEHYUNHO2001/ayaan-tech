@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, JSX, useEffect } from "react";
-import { useThemeContext } from "@/providers/theme-provider";
+import { useThemeContext } from "@/hooks/use-theme-context";
 
 interface PostDetailProps {
   content: string;

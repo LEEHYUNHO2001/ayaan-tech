@@ -5,6 +5,7 @@ import Tag from "@/components/Tag/Tag";
 import { HEADER_MENU_LIST, HeaderMenu } from "@/constants/header";
 import { FC, JSX } from "react";
 import ThemeToggleButton from "@/components/ThemeToggleButton/ThemeToggleButton";
+import Image from "next/image";
 
 const Header: FC = (): JSX.Element => {
   const router = useRouter();
@@ -30,7 +31,7 @@ const Header: FC = (): JSX.Element => {
     <header className="fixed left-0 right-0 top-0 z-50 border-b border-primary bg-[rgba(225,245,255,0.8)]	bg-opacity-5 backdrop-blur-sm dark:border-grey dark:bg-[rgba(45,47,57,0.8)]">
       <div className="container flex cursor-pointer items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2" onClick={handleOnClickHome}>
-          Logo
+          <Image src="/logo.png" width={40} height={40} alt="logo" />
           <h1 className="text-xl font-bold">ayaan tech</h1>
         </div>
 
