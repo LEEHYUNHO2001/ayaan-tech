@@ -7,6 +7,5 @@ export const memoirFileNameList: string[] = [
 export const recommendFileNameList: string[] = [
   "나도 드디어 Next.js 쓰는건가!.md",
   "주도적으로 설계하는 MFA.md",
-  "개발자 도구만 잘써도 이쁨 받는다..md",
-  "디자인 토큰으로 설계하는 디자인 시스템.md",
+  "디자인 시스템 장점 극대화하기.md",
 ];
