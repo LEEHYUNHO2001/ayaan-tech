@@ -7,6 +7,6 @@ export const getBlogDirectory = (pathList: string[]): string =>
   path.join(process.cwd(), ...pathList);
 
 export const getBlogPostFullNameList = (directory: string): string[] =>
-  fs.readdirSync(directory);
+  fs.readdirSync(directory).filter((file) => file.endsWith(".md"));
 
 export const removeMarkdownExtension = replace(/\.md$/, "");
