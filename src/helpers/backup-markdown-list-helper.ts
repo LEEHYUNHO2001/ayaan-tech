@@ -28,7 +28,6 @@ const getBlogPostMetaData = (fileFullName: string): BlogPostMeta => {
   const frontMatter = extractFrontMatter(fileContent);
 
   if (!frontMatter) {
-    console.log("fileFullName1212", fileFullName);
     throw new Error("FrontMatter Not Found");
   }
 

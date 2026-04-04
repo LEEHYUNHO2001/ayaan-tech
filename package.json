@@ -13,7 +13,7 @@
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.11.1",
     "next": "15.2.8",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "ramda": "^0.30.1",
     "raw-loader": "^4.0.2",
     "react": "^19.0.0",
